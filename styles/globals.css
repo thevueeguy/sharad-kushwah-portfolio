@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  background: black;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+@layer components {
 
-body {
-  position: relative;
+  /* html,
+  body {
+    background: black;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    position: relative;
+  } */
+
+  .heroButton {
+    @apply px-6 py-2 border border-black rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40  
+  }
+
 }
