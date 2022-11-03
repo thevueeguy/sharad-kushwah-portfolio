@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Hero({}: Props) {
   const [text, count] = useTypewriter({
-    words: ["Namaskaram!", "I am     Sharad Kushwah", "<Welcome />"],
+    words: ["Namaskaram!", "I am Sharad Kushwah", "<Welcome />"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -15,9 +15,9 @@ export default function Hero({}: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <img
-        className="relative rounded-full h-32 w-32 mx-auto object-cover"
+        className="relative rounded-full h-32 w-32 mx-auto object-cover pt-3"
         src="./pfp.jpeg"
-        alt=""
+        alt="profile-photo"
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
