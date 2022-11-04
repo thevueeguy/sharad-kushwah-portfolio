@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -14,12 +15,20 @@ export default function Hero({}: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <img
+      <motion.img
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
         className="relative rounded-full h-32 w-32 mx-auto object-cover pt-3"
         src="./pfp.jpeg"
         alt="profile-photo"
       />
-      <div className="z-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="z-20"
+      >
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           software developer
         </h2>
@@ -42,7 +51,7 @@ export default function Hero({}: Props) {
             <button className="heroButton">Projects</button>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

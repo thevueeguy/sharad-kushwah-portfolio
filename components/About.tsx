@@ -6,7 +6,7 @@ type Props = {};
 export default function About({}: Props) {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
-      <h3 className="absolute top-24 tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute uppercase top-24 tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
       <motion.img
@@ -42,7 +42,7 @@ export default function About({}: Props) {
         <p className="text-[#e9e5e5] text-lg">
           I'm a final year undergraduate student pursuing my bachelor of
           technology in the department of Electrical Engineering. I am
-          passionate about programming and technology. Currently i am honing my skills,
+          passionate about programming. Currently i am honing my skills,
           exploring and enhancing knowledge in different technologies.
         </p>
         <ul className="space-y-1 hidden md:block list-disc">
