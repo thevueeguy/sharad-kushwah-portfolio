@@ -4,6 +4,7 @@ framer motion
 tailwind css
 react simple typewriter
 react social icons
+heroicons
 
 
 ## Getting Started

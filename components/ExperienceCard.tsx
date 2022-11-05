@@ -18,6 +18,7 @@ export default function ExperienceCard({}: Props) {
         transition={{
           duration: 1,
         }}
+        viewport={{once: true}}
         className="rounded-full h-32 w-32 object-cover object-center xl:w-[200px] xl:h-[200px]"
         src="./pfp.jpeg"
         alt=""
