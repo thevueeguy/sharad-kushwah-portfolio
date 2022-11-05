@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 
 type Props = {};
 
@@ -16,7 +15,7 @@ export default function Projects({}: Props) {
         Projects
       </h3>
 
-      <motion.div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <motion.div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
         {projects.map((project, index) => (
           <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-20 md:p-44 h-screen">
             <motion.img

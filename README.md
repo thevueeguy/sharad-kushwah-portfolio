@@ -5,7 +5,9 @@ tailwind css
 react simple typewriter
 react social icons
 heroicons
-
+react-hook-form
+tailwind-scrollbar
+sanity
 
 ## Getting Started
 

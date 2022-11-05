@@ -9,14 +9,14 @@ import WorkExperience from "../components/WorkExperience";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0">
+    <div className="bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <Head>
         <title>Sharad Kushwah | Portfolio</title>
       </Head>
 
       <Header />
 
-      <section id="hero" className="snap-start">
+      <section id="hero" className="snap-center">
         <Hero />
       </section>
 
@@ -28,15 +28,15 @@ export default function Home() {
         <WorkExperience />
       </section>
 
-      <section id="skills" className="snap-start">
+      <section id="skills" className="snap-center">
         <Skills />
       </section>
       
-      <section id="projects" className="snap-start">
+      <section id="projects" className="snap-center">
         <Projects />
       </section>
 
-      <section id="contact" className="snap-start">
+      <section id="contact" className="snap-center">
         <ContactMe />
       </section>
     </div>
