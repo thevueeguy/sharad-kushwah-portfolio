@@ -11,7 +11,7 @@ export default function Projects({}: Props) {
       transition={{ duration: 1 }}
       className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
       &nbsp;Projects
       </h3>
 
@@ -23,18 +23,18 @@ export default function Projects({}: Props) {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="relative rounded-full h-32 w-32 mx-auto object-cover pt-3"
+              className="relative rounded-full h-20 w-20 sm:h-32 sm:w-32 xl:h-36 xl:w-36 mx-auto object-cover pt-0 md:pt-3"
               src="./pfp.jpeg"
               alt="profile-photo"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-2xl font-semibold text-center">
+              <h4 className="text-base sm:text-xl md:text-2xl font-semibold text-center">
                 <span className="underline decoration-red-700/50">
                   Case study {index + 1} of {projects.length} : react
                 </span>{" "}
                 covid clone
               </h4>
-              <p className="text-[#e9e5e5] text-center text-lg md:text-left">
+              <p className="text-[#e9e5e5] text-center text-sm sm:text-lg md:text-xl lg:text-left ">
                 I'm a final year undergraduate student pursuing my bachelor of
                 technology in the department of Electrical Engineering. I am
                 passionate about programming. Currently i am honing my skills,

@@ -28,10 +28,10 @@ export default function Hero({}: Props) {
         transition={{ duration: 2 }}
         className="z-20"
       >
-        <h2 className="text-base sm:text-xl md:text-2xl mx-auto uppercase text-gray-500 px-4 tracking-[15px]">
-        software developer
+        <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[10px] md:tracking-[15px]">
+          software developer
         </h2>
-        <h1 className="text-1xl md:text-2xl font-semibold px-10 py-2">
+        <h1 className="text-xl md:text-2xl font-semibold px-10 py-2">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="red" />
         </h1>
