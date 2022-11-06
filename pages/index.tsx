@@ -20,7 +20,7 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section id="about" className="snap-start">
+      <section id="about" className="snap-center">
         <About />
       </section>
 
@@ -36,7 +36,7 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section id="contact" className="snap-start">
+      <section id="contact" className="snap-center">
         <ContactMe />
       </section>
     </div>
