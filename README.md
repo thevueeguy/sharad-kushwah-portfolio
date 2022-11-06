@@ -1,6 +1,6 @@
 2xl > xl > lg > md > sm > xs   (Screen sizes in decending order)
 
-Libraries Used
+Libraries Used :
 
 1) Framer Motion                --> For Animations
 2) tailwind CSS-Framework       --> For CSS
