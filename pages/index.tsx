@@ -9,7 +9,7 @@ import WorkExperience from "../components/WorkExperience";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
+    <div className="bg-black text-white h-screen snap-y snap-normal overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <Head>
         <title>Sharad Kushwah | Portfolio</title>
       </Head>

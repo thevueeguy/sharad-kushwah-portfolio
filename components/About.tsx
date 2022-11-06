@@ -5,8 +5,8 @@ type Props = {};
 export default function About({}: Props) {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
-      <h3 className="absolute uppercase top-24 tracking-[20px] text-gray-500 text-2xl">
-        About
+      <h3 className="absolute uppercase top-24 tracking-[20px] text-gray-500 text-2xl mx-auto">
+        &nbsp;About
       </h3>
       <motion.img
         initial={{
@@ -20,7 +20,7 @@ export default function About({}: Props) {
         transition={{
           duration: 1,
         }}
-        className="-mb-20 mt-20 md:mb-0 flex flex-shrink-0 flex-col w-56 h-56 object-cover md:flex-row md:w-[300px] md:h-[400px] xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 mt-20 md:mb-0 flex flex-shrink-0 flex-col w-44 h-44 sm:w-60 sm:h-60 object-cover md:flex-row md:w-96 md:h-96 xl:w-auto xl:h-auto"
         src="./2.png"
         alt="Image by pikisuperstar on Freepik"
       />
@@ -38,13 +38,13 @@ export default function About({}: Props) {
         }}
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
-        <p className="text-[#e9e5e5] text-lg">
+        <p className="text-[#e9e5e5] text-sm sm:text-lg">
           I'm a final year undergraduate student pursuing my bachelor of
           technology in the department of Electrical Engineering. I am
           passionate about programming. Currently i am honing my skills,
           exploring and enhancing knowledge in different technologies.
         </p>
-        <ul className="space-y-1 hidden md:block list-disc">
+        <ul className="space-y-1 hidden md:block list-disc text-sm sm:text-lg">
           <li className="list-item-about">
             While doing competitive programming in <b>C++</b> and <b>Javascript</b> I have solved <b>500+</b> problems across several coding platforms up until now .
           </li>
@@ -60,7 +60,7 @@ export default function About({}: Props) {
           </li>
         </ul>
         <hr />
-        <p className="text-[#e9e5e5] text-lg">
+        <p className="text-[#e9e5e5] text-sm sm:text-lg">
           My aim is to keep getting better at problem-solving and to always keep
           a learning attitude in order to become a very good software engineer.
           Besides academics I love to read philosophy, practice meditation and
