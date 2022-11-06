@@ -18,9 +18,9 @@ export default function ContactMe({}: Props) {
   };
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-        Contact
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl space-y-3 sm:space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10 justify-evenly items-center mx-auto">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      &nbsp;Contact
       </h3>
       <motion.div
         initial={{ opacity: 0 }}
@@ -28,41 +28,41 @@ export default function ContactMe({}: Props) {
         transition={{ duration: 1 }}
         className="flex flex-col space-y-10"
       >
-        <h4 className="text-4xl font-semibold text-center">
-          I have got what you need.
-          <span className="decoration-red-800 underline">Lets talk</span>
+        <h4 className="text-base sm:text-xl md:text-2xl font-semibold text-center">
+          I have got what you need.&nbsp;&nbsp; 
+          <span className="decoration-red-800 underline text-base sm:text-xl md:text-2xl">Lets talk</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-3 sm:space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-red-800 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">7999685385</p>
+            <PhoneIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7  animate-pulse" />
+            <p className="text-base sm:text-xl md:text-2xl">7999685385</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-red-800 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">123 street food</p>
+            <MapPinIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-base sm:text-xl md:text-2xl">123 street food</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-red-800 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">sharadrkushwah@gmail.com</p>
+            <EnvelopeIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
+            <p className="text-base sm:text-xl md:text-2xl">sharadrkushwah@gmail.com</p>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 mx-auto w-fit"
+          className="flex flex-col space-y-2 mx-auto w-[90%]"
         >
           <div className="flex space-x-2">
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput"
+              className="contactInput w-[50%]"
               type="text"
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="contactInput w-[50%]"
               type="email"
             />
           </div>
@@ -78,7 +78,7 @@ export default function ContactMe({}: Props) {
             className="contactInput"
           />
           <button
-            className="bg-red-900 rounded-md uppercase font-medium text-lg py-5 px-10 tracking-wider hover:bg-red-900/50"
+            className="bg-red-900 rounded-md uppercase font-medium text-base sm:text-lg md:text-xl px-0 py-3 md:px-10 md:py-5 tracking-wider hover:bg-red-900/50"
             type="submit"
           >
             Submit

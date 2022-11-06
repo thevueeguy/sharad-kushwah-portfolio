@@ -5,7 +5,7 @@ type Props = {};
 export default function About({}: Props) {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
-      <h3 className="absolute uppercase top-24 tracking-[20px] text-gray-500 text-2xl mx-auto">
+      <h3 className="absolute uppercase top-24 tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
         &nbsp;About
       </h3>
       <motion.img
@@ -44,7 +44,7 @@ export default function About({}: Props) {
           passionate about programming. Currently i am honing my skills,
           exploring and enhancing knowledge in different technologies.
         </p>
-        <ul className="space-y-1 hidden md:block list-disc text-sm sm:text-lg">
+        <ul className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
           <li className="list-item-about">
             While doing competitive programming in <b>C++</b> and <b>Javascript</b> I have solved <b>500+</b> problems across several coding platforms up until now .
           </li>

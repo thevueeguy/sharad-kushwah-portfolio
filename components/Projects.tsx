@@ -11,8 +11,8 @@ export default function Projects({}: Props) {
       transition={{ duration: 1 }}
       className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
-        Projects
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      &nbsp;Projects
       </h3>
 
       <motion.div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
