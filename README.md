@@ -10,5 +10,6 @@ Libraries Used :
 6) react-hook-form              --> For implementing Easily Form Using React-Hooks
 7) tailwind-scrollbar           --> For ScrollBar Animations
 8) Sanity                       --> For Backend
+9) NextJs API                   --> To connect with sanity (check folder ./pages/api/)
 
 Hosted URL -> https://reactguy.me
