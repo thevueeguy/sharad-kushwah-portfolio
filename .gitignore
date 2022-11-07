@@ -1,7 +1,7 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# sanity.io
+sanity-portfolio/node_modules
 
 # dependencies
-/sanity-portfolio
 /node_modules
 /.pnp
 .pnp.js
