@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-black text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <Head>
-        <title>Sharad Kushwah | Portfolio</title>
+        <title>Sharad Kushwah</title>
       </Head>
 
       <Header />
