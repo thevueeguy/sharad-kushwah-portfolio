@@ -29,10 +29,10 @@ export default function ExperienceCard({ experience }: Props) {
 
       <div className="px-0 md:px-10">
         <h4 className="text-base sm:text-xl md:text-2xl font-light">
-          CEO of thevueeguy.com{" "}
+          {experience?.jobTitle}
         </h4>
         <p className="text-base sm:text-lg md:text-xl font-bold mt-1">
-          thevueeguy
+          {experience?.company}
         </p>
         <div className="flex space-x-2 my-2">
           {experience?.technologies.map((technology) => (
@@ -51,7 +51,7 @@ export default function ExperienceCard({ experience }: Props) {
             : new Date(experience?.dateEnded).toDateString()}
         </p>
 
-        <ul className="scrollbar-thin pr-2 max-w-lg scrollbar-track-black scrollbar-thumb-red-800">
+        <ul className="scrollbar-thin pr-2 scrollbar-track-black scrollbar-thumb-red-800">
           {experience?.points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}

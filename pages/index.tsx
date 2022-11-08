@@ -54,7 +54,7 @@ export default function Home({
       </section>
 
       <section id="projects">
-        <Projects />
+        <Projects projectData={projects}/>
       </section>
 
       <section id="contact">
