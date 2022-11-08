@@ -43,7 +43,7 @@ export default function About({ pageInfo }: Props) {
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
         <p className="text-[#e9e5e5] text-sm sm:text-lg">
-          I'm a final year undergraduate student pursuing my bachelor of
+          I&quot;m a final year undergraduate student pursuing my bachelor of
           technology in the department of Electrical Engineering. I am
           passionate about programming. Currently i am honing my skills,
           exploring and enhancing knowledge in different technologies.
