@@ -35,18 +35,18 @@ export default function Home({
         <title>Sharad Kushwah</title>
       </Head>
 
-      <Header socials={socials}/>
+      <Header socials={socials} />
 
       <section id="hero">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       <section id="about">
-        <About />
+        <About pageInfo={pageInfo}/>
       </section>
 
       <section id="experience">
-        <WorkExperience />
+        <WorkExperience experiences={experiences}/>
       </section>
 
       <section id="skills">

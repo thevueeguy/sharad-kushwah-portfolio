@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 import BackgroundCircles from "./BackgroundCircles";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function Hero({}: Props) {
+export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
-    words: ["Namaskaram!", "I am Sharad Kushwah", "<Welcome />"],
+    words: ["Namaskaram!", `I am ${pageInfo?.name}`, "<Welcome />"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -19,7 +23,7 @@ export default function Hero({}: Props) {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
         className="relative rounded-full h-32 w-32 mx-auto object-cover pt-3"
-        src="./pfp.jpeg"
+        src={urlFor(pageInfo?.heroImage).url()}
         alt="profile-photo"
       />
       <motion.div
@@ -29,7 +33,7 @@ export default function Hero({}: Props) {
         className="z-20"
       >
         <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[10px] md:tracking-[15px]">
-          software developer
+          {pageInfo?.role}
         </h2>
         <h1 className="text-xl md:text-2xl font-semibold px-10 py-2">
           <span className="mr-3">{text}</span>

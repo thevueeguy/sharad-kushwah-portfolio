@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-export default function About({}: Props) {
+export default function About({ pageInfo }: Props) {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
       <h3 className="absolute uppercase top-24 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
@@ -21,7 +25,7 @@ export default function About({}: Props) {
           duration: 1,
         }}
         className="-mb-20 mt-20 md:mb-0 flex flex-shrink-0 flex-col w-44 h-44 sm:w-60 sm:h-60 object-cover md:flex-row md:w-96 md:h-96 xl:w-auto xl:h-auto"
-        src="./2.png"
+        src={urlFor(pageInfo?.profilePicture).url()}
         alt="Image by pikisuperstar on Freepik"
       />
       <motion.div
@@ -46,9 +50,13 @@ export default function About({}: Props) {
         </p>
         <ul className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
           <li className="list-item-about">
-            While doing competitive programming in <b>C++</b> and <b>Javascript</b> I have solved <b>500+</b> problems across several coding platforms up until now .
+            While doing competitive programming in <b>C++</b> and{" "}
+            <b>Javascript</b> I have solved <b>500+</b> problems across several
+            coding platforms up until now .
           </li>
-          <li className="list-item-about">I am a <b>MERN</b> stack developer.</li>
+          <li className="list-item-about">
+            I am a <b>MERN</b> stack developer.
+          </li>
           <li className="list-item-about">
             I have <b>2+</b> years of experience in teaching Mathematics.
           </li>
