@@ -50,7 +50,7 @@ export default function Home({
       </section>
 
       <section id="skills">
-        <Skills />
+        <Skills skills={skills}/>
       </section>
 
       <section id="projects">
