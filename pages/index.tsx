@@ -34,7 +34,7 @@ export default function Home({
       <Head>
         <title>Sharad Kushwah</title>
       </Head>
-
+{/* 
       <Header socials={socials} />
 
       <section id="hero">
@@ -59,31 +59,31 @@ export default function Home({
 
       <section id="contact">
         <ContactMe />
-      </section>
+      </section> */}
     </div>
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await getPageInfo();
-  const experiences: Experience[] = await getExperiences();
-  const projects: Project[] = await getProjects();
-  const skills: Skill[] = await getSkills();
-  const socials: Social[] = await getSocials();
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const pageInfo: PageInfo = await getPageInfo();
+//   const experiences: Experience[] = await getExperiences();
+//   const projects: Project[] = await getProjects();
+//   const skills: Skill[] = await getSkills();
+//   const socials: Social[] = await getSocials();
 
-  return {
-    props: {
-      pageInfo,
-      experiences,
-      projects,
-      skills,
-      socials,
-    },
+//   return {
+//     props: {
+//       pageInfo,
+//       experiences,
+//       projects,
+//       skills,
+//       socials,
+//     },
 
-    // -next js will regenerate the page every 10 seconds
-    // -when a request comes in
-    // -at most once every 10 seconds
+//     // -next js will regenerate the page every 10 seconds
+//     // -when a request comes in
+//     // -at most once every 10 seconds
 
-    // revalidate: 10,
-  };
-};
+//     // revalidate: 10,
+//   };
+// };

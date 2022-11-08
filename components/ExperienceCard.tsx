@@ -37,7 +37,7 @@ export default function ExperienceCard({ experience }: Props) {
         </p>
         <div className="flex space-x-2 my-2">
           {experience?.technologies.map((technology) => (
-            <Image
+            <motion.img
               key={technology._id}
               className="h-10 w-10 rounded-full"
               src={urlFor(technology.image).url()}

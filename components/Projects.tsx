@@ -41,7 +41,7 @@ export default function Projects({ projectData }: Props) {
 
               <div className="flex flex-row space-x-5 items-center justify-center">
                 {project?.technologies.map((technology) => (
-                  <Image
+                  <motion.img
                     className="h-10 w-10 lg:h-16 lg:w-16 rounded-full"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
