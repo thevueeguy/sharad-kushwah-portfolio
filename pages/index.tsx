@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import ContactMe from "../components/ContactMe";
@@ -6,15 +7,35 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
+import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+import { getExperiences } from "../utils/getExperiences";
+import { getPageInfo } from "../utils/getPageInfo";
+import { getProjects } from "../utils/getProjects";
+import { getSkills } from "../utils/getSkills";
+import { getSocials } from "../utils/getSocials";
 
-export default function Home() {
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+};
+
+export default function Home({
+  pageInfo,
+  experiences,
+  projects,
+  skills,
+  socials,
+}: Props) {
   return (
     <div className="bg-black text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <Head>
         <title>Sharad Kushwah</title>
       </Head>
 
-      <Header />
+      <Header socials={socials}/>
 
       <section id="hero">
         <Hero />
@@ -31,7 +52,7 @@ export default function Home() {
       <section id="skills">
         <Skills />
       </section>
-      
+
       <section id="projects">
         <Projects />
       </section>
@@ -42,3 +63,27 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await getPageInfo();
+  const experiences: Experience[] = await getExperiences();
+  const projects: Project[] = await getProjects();
+  const skills: Skill[] = await getSkills();
+  const socials: Social[] = await getSocials();
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      projects,
+      skills,
+      socials,
+    },
+
+    // -next js will regenerate the page every 10 seconds
+    // -when a request comes in
+    // -at most once every 10 seconds
+
+    // revalidate: 10,
+  };
+};
