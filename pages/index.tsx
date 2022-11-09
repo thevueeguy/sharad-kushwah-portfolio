@@ -83,6 +83,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     // -next js will regenerate the page every 10 seconds
     // -when a request comes in
     // -at most once every 10 seconds
+    // useful if data is changing continuosly
 
     // revalidate: 10,
   };
