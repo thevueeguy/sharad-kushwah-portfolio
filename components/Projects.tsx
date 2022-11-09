@@ -33,9 +33,6 @@ export default function Projects({ projectData }: Props) {
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-base sm:text-xl md:text-2xl font-semibold text-center">
-                <span className="underline decoration-red-700/50">
-                  Case study {index + 1} of {projectData.length} :
-                </span>{" "}
                 {project?.title}
               </h4>
 

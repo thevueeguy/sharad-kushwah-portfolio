@@ -58,7 +58,7 @@ export default function Home({
       </section>
 
       <section id="contact">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo}/>
       </section>
     </div>
   );
