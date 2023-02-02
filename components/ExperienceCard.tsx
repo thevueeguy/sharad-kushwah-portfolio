@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { urlFor } from "../sanity";
 import { Experience } from "../typings";
-
 type Props = {
   experience: Experience;
 };
@@ -23,23 +22,23 @@ export default function ExperienceCard({ experience }: Props) {
           duration: 1,
         }}
         viewport={{ once: true }}
-        className="rounded-full object-cover object-center h-16 w-16 md:h-28 md:w-28 xl:h-36 xl:w-36"
+        className="rounded-full object-cover object-center h-24 w-24 md:h-28 md:w-28 xl:h-36 xl:w-36"
         src={urlFor(experience?.companyImage).url()}
         alt=""
       />
 
-      <div className="px-0 pt-2 md:px-10 text-center">
+      <div className="px-0 md:px-10">
         <h4 className="text-base sm:text-xl md:text-2xl font-light">
           {experience?.jobTitle}
         </h4>
         <p className="text-base sm:text-lg md:text-xl font-bold mt-1">
           {experience?.company}
         </p>
-        <div className="flex space-x-2 my-2 justify-center">
+        <div className="flex space-x-2 my-2">
           {experience?.technologies.map((technology) => (
             <motion.img
               key={technology._id}
-              className="h-10 w-10 rounded-full bg-white border-b-2 border-t-2"
+              className="h-10 w-10 rounded-full"
               src={urlFor(technology.image).url()}
               alt={technology.title}
             />
@@ -52,13 +51,11 @@ export default function ExperienceCard({ experience }: Props) {
             : new Date(experience?.dateEnded).toDateString()}
         </p>
 
-        <div className="text-left">
-          <ul className="scrollbar-thin pr-2 scrollbar-track-black scrollbar-thumb-red-800 list-disc list-inside ml-5">
-            {experience?.points.map((point, index) => (
-              <li key={index} className="pb-2 text-sm md:text-md lg:text-lg">{point}</li>
-            ))}
-          </ul>
-        </div>
+        <ul className="scrollbar-thin pr-2 scrollbar-track-black scrollbar-thumb-red-800">
+          {experience?.points.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
+        </ul>
       </div>
     </article>
   );
