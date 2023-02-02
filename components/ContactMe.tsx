@@ -22,7 +22,7 @@ export default function ContactMe({ pageInfo }: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl space-y-3 sm:space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10 justify-evenly items-center mx-auto">
-      <h3 className="absolute top-24 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
         &nbsp;Contact
       </h3>
       <motion.div

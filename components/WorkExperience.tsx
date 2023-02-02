@@ -9,7 +9,7 @@ type Props = {
 export default function WorkExperience({ experiences }: Props) {
   return (
     <motion.div className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-around mx-auto items-center z-10">
-      <h3 className="absolute uppercase top-24 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      <h3 className="absolute uppercase top-5 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
         &nbsp;Experience
       </h3>
 
