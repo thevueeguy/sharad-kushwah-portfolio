@@ -8,7 +8,7 @@ type Props = {
 
 export default function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col text-center rounded-lg items-center p-5 space-y-1 md:space-y-7 md:p-10 flex-shrink-0 w-[325px] md:w-[500px] xl:w-[700px] snap-center lg:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col text-center rounded-lg items-center p-5 space-y-1 md:space-y-7 md:p-10 flex-shrink-0 w-[325px] md:w-[600px] xl:w-[700px] snap-center lg:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -34,11 +34,11 @@ export default function ExperienceCard({ experience }: Props) {
         <p className="text-base sm:text-lg md:text-xl font-bold mt-1">
           {experience?.company}
         </p>
-        <div className="flex space-x-2 my-2 justify-center">
+        <div className="flex space-x-2 my-2 justify-center flex-wrap">
           {experience?.technologies.map((technology) => (
             <motion.img
               key={technology._id}
-              className="h-10 w-10 rounded-full"
+              className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-white"
               src={urlFor(technology.image).url()}
               alt={technology.title}
             />
@@ -53,9 +53,7 @@ export default function ExperienceCard({ experience }: Props) {
 
         <ul className="scrollbar-thin pr-2 scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc ">
           {experience?.points.map((point, index) => (
-            <li key={index}>
-              <div >{point}</div>
-            </li>
+            <li key={index} className="mb-2 text-xs sm:text-md md:text-xl ">{point}</li>
           ))}
         </ul>
       </div>

@@ -3,16 +3,24 @@
 @tailwind utilities;
 
 @layer components {
-  
   .heroButton {
-    @apply px-6 py-2 border border-black rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40  
+    @apply px-6 py-2 border border-black rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all  hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
   }
 
   .list-item-about {
-    @apply ml-10 pl-1 text-lg text-[#c7c2c2]
+    @apply ml-10 pl-1 text-lg text-[#c7c2c2];
   }
 
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b border-red-800/50 px-2 py-1 sm:px-4 sm:py-3 md:px-6 md:py-4 text-gray-400 placeholder-slate-400/10 transition-all focus:border-orange-400/50 hover:border-orange-400/50 
+    @apply outline-none bg-slate-400/10 rounded-sm border-b border-red-800/50 px-2 py-1 sm:px-4 sm:py-3 md:px-6 md:py-4 text-gray-400 placeholder-slate-400/10 transition-all focus:border-orange-400/50 hover:border-orange-400/50;
   }
+
+}
+
+.swiper-pagination-bullet {
+  background-color: grey !important;
+}
+
+:root {
+  --swiper-theme-color: #990000 !important;
 }
