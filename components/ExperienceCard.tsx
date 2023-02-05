@@ -34,11 +34,11 @@ export default function ExperienceCard({ experience }: Props) {
         <p className="text-base sm:text-lg md:text-xl font-bold mt-1">
           {experience?.company}
         </p>
-        <div className="flex space-x-2 my-2 justify-center flex-wrap">
+        <div className="flex space-x-2 my-2 lg:my-5 justify-center flex-wrap">
           {experience?.technologies.map((technology) => (
             <motion.img
               key={technology._id}
-              className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-white"
+              className="h-8 w-8 md:h-10 md:w-10 lg:h-14 lg:w-14 rounded-full bg-white border-2 border-sky-600"
               src={urlFor(technology.image).url()}
               alt={technology.title}
             />
