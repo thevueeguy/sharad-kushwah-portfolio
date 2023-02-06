@@ -33,7 +33,7 @@ export default function WorkExperience({ experiences }: Props) {
         >
           {experiences?.map((experience, index) => (
             <SwiperSlide key={experience._createdAt} virtualIndex={index} className="my-10">
-              <div className="w-full flex justify-center items-center">
+              <div className="w-full flex justify-center items-center snap-x snap-mandatory">
                 <ExperienceCard key={experience._id} experience={experience} />
               </div>
             </SwiperSlide>

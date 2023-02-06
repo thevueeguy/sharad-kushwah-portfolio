@@ -21,13 +21,13 @@
 }
 
 :root {
-  --swiper-theme-color: #660000 !important;
+  --swiper-theme-color: #8a0e0e !important;
 }
 
 @media only screen and (max-width: 600px) {
   .swiper-button-next:after,
   .swiper-button-prev:after {
-    font-size: larger !important;
+    font-size: x-large !important;
     font-weight: bold !important;
   }
 }
