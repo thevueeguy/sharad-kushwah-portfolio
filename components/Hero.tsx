@@ -18,21 +18,26 @@ export default function Hero({ pageInfo }: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <motion.img
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="relative rounded-full h-32 w-32 mx-auto object-cover pt-3"
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt="profile-photo"
-      />
+      <div className="relative rounded-full h-32 w-32 mx-auto group">
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="absolute rounded-full h-32 w-32 mx-auto object-cover"
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt="profile-photo"
+        />
+        {/* <div className="flex items-center justify-center scale-0 transition-transform duration-500 ease-in-out origin-bottom group-hover:transform-none bg-black rounded-full h-32 w-32 mx-auto absolute">
+          HELLO
+        </div> */}
+      </div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
         className="z-20"
       >
-        <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[10px] md:tracking-[15px]">
+        <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">
           {pageInfo?.role}
         </h2>
         <h1 className="text-xl md:text-2xl font-semibold px-10 py-2">
@@ -40,7 +45,7 @@ export default function Hero({ pageInfo }: Props) {
           <Cursor cursorColor="red" />
         </h1>
 
-        <div className="pt-10">
+        <div className="pt-8">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

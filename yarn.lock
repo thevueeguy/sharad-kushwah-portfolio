@@ -2034,6 +2034,11 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-simple-toasts@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/react-simple-toasts/-/react-simple-toasts-3.2.2.tgz#f5e89f27887d945125836c411b83c1ac6886c128"
+  integrity sha512-bLY6TkGg7lrQWVSlAShKKVU/+1e+3TzQ19av1MyIshRODSe0UFf5Qd5cgo77TRIKOYI64Y2br7rprvmgCV1m6w==
+
 react-simple-typewriter@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/react-simple-typewriter/-/react-simple-typewriter-4.0.5.tgz#404a1e12ccb97ad7813b48f8e58813117fe8e3fb"

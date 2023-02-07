@@ -26,13 +26,18 @@ export default function Header({ socials }: Props) {
         }}
         className="flex flex-row items-center"
       >
-        {socials?.map((social) => (
-          <SocialIcon
-            key={social._id}
-            url={social.url}
-            fgColor="white"
-            bgColor="transparent"
-          />
+        {socials?.map((social, index) => (
+          <div key={social._id} className="flex items-center group ">
+            <SocialIcon
+              key={social._id}
+              url={social.url}
+              fgColor="white"
+              bgColor="transparent"
+            />
+            <p className="transition-all duration-300 ease-out opacity-50 w-0 overflow-hidden origin-top-left -rotate-12 group-hover:opacity-100 group-hover:w-fit group-hover:rotate-0">
+              {social.title}
+            </p>
+          </div>
         ))}
       </motion.div>
 

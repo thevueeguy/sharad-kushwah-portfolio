@@ -1,6 +1,10 @@
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import {
+  BuildingLibraryIcon,
+  EnvelopeIcon, MapPinIcon
+} from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-simple-toasts";
 import { PageInfo } from "../typings";
 
 type Props = {
@@ -16,8 +20,11 @@ type Inputs = {
 
 export default function ContactMe({ pageInfo }: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
+
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    location.href = `mailto:sharadrkushwah@gmail.com?subject=${formData.subject}&body=Hello, my name is ${formData.name}, ${formData.message} (${formData.email})`;
+    if (formData.email && formData.message && formData.name && formData.subject)
+      location.href = `mailto:sharadrkushwah@gmail.com?subject=${formData.subject}&body=Hello, my name is ${formData.name}, ${formData.message} (${formData.email})`;
+    else toast("Can not submit with empty values.", 1000);
   };
 
   return (
@@ -40,14 +47,14 @@ export default function ContactMe({ pageInfo }: Props) {
 
         <div className="space-y-3 sm:space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7  animate-pulse" />
-            <p className="text-base sm:text-xl md:text-2xl">
-              <b className="text-red-800">+</b>917999685385
-            </p>
+            <BuildingLibraryIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7  animate-pulse" />
+            <p className="text-base sm:text-xl md:text-2xl">MITS</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-            <p className="text-base sm:text-xl md:text-2xl">{pageInfo?.address}</p>
+            <p className="text-base sm:text-xl md:text-2xl">
+              {pageInfo?.address}
+            </p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
@@ -86,11 +93,25 @@ export default function ContactMe({ pageInfo }: Props) {
             placeholder="Message"
             className="contactInput"
           />
-          <button
-            className="bg-red-900 rounded-md uppercase font-medium text-base sm:text-lg md:text-xl px-0 py-3 md:px-10 md:py-5 tracking-wider hover:bg-red-900/50"
-            type="submit"
-          >
-            Submit
+
+          <button className="contactButton">
+            <div className="svg-wrapper-1 pr-3">
+              <div className="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span>Submit</span>
           </button>
         </form>
       </motion.div>
