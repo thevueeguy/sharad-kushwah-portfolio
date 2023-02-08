@@ -31,8 +31,8 @@ export default function Home({
 }: Props) {
   return (
     <div className="bg-black relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
-      <div className="circle blur1"></div>
-      <div className="circle blur2"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
 
       <Head>
         <title>Sharad Kushwah</title>
