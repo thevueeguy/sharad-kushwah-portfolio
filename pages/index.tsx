@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import About from "../components/About";
@@ -31,8 +32,18 @@ export default function Home({
 }: Props) {
   return (
     <div className="bg-black relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
-      <div className="circle"></div>
-      <div className="circle"></div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="circle"
+      ></motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="circle"
+      ></motion.div>
 
       <Head>
         <title>Sharad Kushwah</title>
