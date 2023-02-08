@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 // button styling
 import "../styles/hero-button.css"
 import "../styles/contact-button.css"
+import "../styles/cube.css"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

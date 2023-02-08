@@ -8,11 +8,41 @@ type Props = {
 
 export default function About({ pageInfo }: Props) {
   return (
-    <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
+    <div className="h-screen flex flex-col relative text-center mb-10 md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
       <h3 className="absolute uppercase top-10 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
         &nbsp;About
       </h3>
-      <motion.img
+  
+      <div className="cube -mb-20 mt-20 md:mb-0 mx-5 lg:mx-20 flex flex-shrink-0 flex-col md:flex-row object-cover w-44 h-44 sm:w-60 sm:h-60 md:w-96 md:h-96 xl:w-auto xl:h-auto">
+        <div className="topD"></div> 
+        <div>
+          <span style={{ ["--i" as string]: 0 }}></span>
+          <span style={{ ["--i" as string]: 1 }}></span>
+          <span style={{ ["--i" as string]: 2 }}></span>
+          <span style={{ ["--i" as string]: 3 }}></span>
+        </div>
+
+        <div className="cube2">
+          <div>
+            <span style={{ ["--i" as string]: 0 }}></span>
+            <span style={{ ["--i" as string]: 1 }}></span>
+            <span style={{ ["--i" as string]: 2 }}></span>
+            <span style={{ ["--i" as string]: 3 }}></span>
+          </div>
+
+          <div className="cube3">
+            <div className="top3"></div>
+            <div>
+              <span style={{ ["--i" as string]: 0 }}></span>
+              <span style={{ ["--i" as string]: 1 }}></span>
+              <span style={{ ["--i" as string]: 2 }}></span>
+              <span style={{ ["--i" as string]: 3 }}></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <motion.img
         initial={{
           x: -200,
           opacity: 0,
@@ -24,10 +54,10 @@ export default function About({ pageInfo }: Props) {
         transition={{
           duration: 1,
         }}
-        className="-mb-20 mt-20 md:mb-0 flex flex-shrink-0 flex-col w-44 h-44 sm:w-60 sm:h-60 object-cover md:flex-row md:w-96 md:h-96 xl:w-auto xl:h-auto"
+        className=""
         src={urlFor(pageInfo?.profilePicture).url()}
         alt="Image by pikisuperstar on Freepik"
-      />
+      /> */}
       <motion.div
         initial={{
           x: 200,
