@@ -1,0 +1,68 @@
+
+.blur1::after {
+  content: '';
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  text-align: center;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border-radius: 50%;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.blur2::after {
+  content: '';
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  text-align: center;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border-radius: 50%;
+  z-index: 5;
+  right: 0;
+  bottom: 0;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#ecc490, #ff7300);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+  opacity: 0.7;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-30px);
+    left: 5px;
+    top: 50px;
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(30px);
+    right: 5px;
+    bottom: 50px;
+  }
+}

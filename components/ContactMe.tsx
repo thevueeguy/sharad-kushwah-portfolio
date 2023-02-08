@@ -1,6 +1,7 @@
 import {
   BuildingLibraryIcon,
-  EnvelopeIcon, MapPinIcon
+  EnvelopeIcon,
+  MapPinIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -66,33 +67,42 @@ export default function ContactMe({ pageInfo }: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 mx-auto w-[90%]"
+          className="flex flex-col space-y-2 mx-auto w-[80%] h-auto"
         >
           <div className="flex space-x-2">
+            <div className="containerInput">
+              <input
+                {...register("name")}
+                placeholder="Name"
+                className="contactInput w-[50%]"
+                type="text"
+              />
+            </div>
+            <div className="containerInput ">
+              <input
+                {...register("email")}
+                placeholder="Email"
+                className="contactInput w-[50%]"
+                type="email"
+              />
+            </div>
+          </div>
+
+          <div className="containerInput w-full">
             <input
-              {...register("name")}
-              placeholder="Name"
-              className="contactInput w-[50%]"
+              {...register("subject")}
+              placeholder="Subject"
+              className="contactInput w-full"
               type="text"
             />
+          </div>
+          <div className="containerInput w-full">
             <input
-              {...register("email")}
-              placeholder="Email"
-              className="contactInput w-[50%]"
-              type="email"
+              {...register("message")}
+              placeholder="Message"
+              className="contactInput w-full"
             />
           </div>
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            {...register("message")}
-            placeholder="Message"
-            className="contactInput"
-          />
 
           <button className="contactButton">
             <div className="svg-wrapper-1 pr-3">

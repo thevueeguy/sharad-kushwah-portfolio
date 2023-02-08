@@ -30,7 +30,10 @@ export default function Home({
   socials,
 }: Props) {
   return (
-    <div className="bg-black text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
+    <div className="bg-black relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
+      <div className="circle blur1"></div>
+      <div className="circle blur2"></div>
+
       <Head>
         <title>Sharad Kushwah</title>
       </Head>
@@ -42,23 +45,23 @@ export default function Home({
       </section>
 
       <section id="about">
-        <About pageInfo={pageInfo}/>
+        <About pageInfo={pageInfo} />
       </section>
 
       <section id="experience">
-        <WorkExperience experiences={experiences}/>
+        <WorkExperience experiences={experiences} />
       </section>
 
       <section id="skills">
-        <Skills skills={skills}/>
+        <Skills skills={skills} />
       </section>
 
       <section id="projects">
-        <Projects projectData={projects}/>
+        <Projects projectData={projects} />
       </section>
 
       <section id="contact">
-        <ContactMe pageInfo={pageInfo}/>
+        <ContactMe pageInfo={pageInfo} />
       </section>
     </div>
   );

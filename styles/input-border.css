@@ -1,0 +1,58 @@
+.containerInput {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0 4px 0 !important;
+  z-index: 1;
+}
+
+.containerInput::before {
+  content: "";
+  width: 110%;
+  aspect-ratio: 1;
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  animation: rotate6234 2s ease-in-out infinite;
+  z-index: -1;
+  background-image: conic-gradient(
+    from 0deg at 50% 50%,
+    #073aff00 0%,
+    #ff0000ff 25%,
+    #073aff00 25%
+  );
+}
+
+.containerInput > input {
+  min-width: 210px;
+  height: 50px;
+  font-size: inherit;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  background-color: #0a0a0a;
+  outline: 5px solid #0a0a0a;
+}
+
+.containerInput > input:focus {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown) {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown):valid {
+  outline: 4px solid rgb(0, 255, 183);
+  border-radius: 0;
+}
+
+@keyframes rotate6234 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

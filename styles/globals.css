@@ -12,7 +12,7 @@
   }
 
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b border-red-800/50 px-2 py-1 sm:px-4 sm:py-3 md:px-6 md:py-4 text-gray-400 placeholder-slate-400/60 transition-all focus:border-orange-400/50 hover:border-orange-400/50;
+    @apply  bg-slate-400/10 rounded-sm px-2 py-1 sm:px-4 sm:py-3 md:px-6 md:py-4 text-gray-400 placeholder-slate-400/60 ;
   }
 
   .contactButton {

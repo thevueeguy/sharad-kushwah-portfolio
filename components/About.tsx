@@ -42,22 +42,6 @@ export default function About({ pageInfo }: Props) {
         </div>
       </div>
 
-      {/* <motion.img
-        initial={{
-          x: -200,
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-        }}
-        transition={{
-          duration: 1,
-        }}
-        className=""
-        src={urlFor(pageInfo?.profilePicture).url()}
-        alt="Image by pikisuperstar on Freepik"
-      /> */}
       <motion.div
         initial={{
           x: 200,
