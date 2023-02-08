@@ -32,7 +32,11 @@ export default function WorkExperience({ experiences }: Props) {
           onSlideChange={() => {}}
         >
           {experiences?.map((experience, index) => (
-            <SwiperSlide key={experience._createdAt} virtualIndex={index} className="my-10">
+            <SwiperSlide
+              key={experience._createdAt}
+              virtualIndex={index}
+              className="my-10"
+            >
               <div className="w-full flex justify-center items-center snap-x snap-mandatory">
                 <ExperienceCard key={experience._id} experience={experience} />
               </div>
@@ -40,12 +44,6 @@ export default function WorkExperience({ experiences }: Props) {
           ))}
         </Swiper>
       </div>
-      {/* 
-      <div className="w-full flex space-x-5 overflow-x-scroll overflow-y-hidden p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
-        {experiences?.map((experience) => (
-          <ExperienceCard key={experience._id} experience={experience} />
-        ))}
-      </div> */}
     </motion.div>
   );
 }

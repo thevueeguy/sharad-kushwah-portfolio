@@ -27,9 +27,6 @@ export default function Hero({ pageInfo }: Props) {
           src={urlFor(pageInfo?.heroImage).url()}
           alt="profile-photo"
         />
-        {/* <div className="flex items-center justify-center scale-0 transition-transform duration-500 ease-in-out origin-bottom group-hover:transform-none bg-black rounded-full h-32 w-32 mx-auto absolute">
-          HELLO
-        </div> */}
       </div>
       <motion.div
         initial={{ opacity: 0 }}
