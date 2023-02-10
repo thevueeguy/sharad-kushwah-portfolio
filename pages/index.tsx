@@ -1,14 +1,21 @@
 import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
 import Head from "next/head";
+
+// Components
 import About from "../components/About";
 import ContactMe from "../components/ContactMe";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import Particle from "../components/Particle";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
+
+// Type definition
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+
+// Static props
 import { getExperiences } from "../utils/getExperiences";
 import { getPageInfo } from "../utils/getPageInfo";
 import { getProjects } from "../utils/getProjects";
@@ -74,6 +81,8 @@ export default function Home({
       <section id="contact">
         <ContactMe pageInfo={pageInfo} />
       </section>
+
+      <Particle />
     </div>
   );
 }
