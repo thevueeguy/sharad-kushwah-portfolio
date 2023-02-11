@@ -17,9 +17,9 @@ export default function ExperienceCard({ experience }: Props) {
   // }
 
   return (
-    <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+    <ReactCardFlip isFlipped={isFlipped} flipSpeedFrontToBack={1} flipSpeedBackToFront={1} flipDirection="horizontal">
       <div className="card bg-black">
-        <article className="flex flex-col text-center rounded-lg items-center p-5 space-y-1 md:space-y-7 md:p-10 flex-shrink-0 w-[325px] md:w-[600px] xl:w-[700px] snap-center cursor-pointer transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col text-center rounded-lg items-center py-5 space-y-1 md:space-y-7 md:py-10 flex-shrink-0 w-[280px] md:w-[500px] xl:w-[600px] snap-center cursor-pointer transition-opacity duration-200 overflow-hidden">
           <motion.img
             initial={{
               y: -100,
@@ -70,11 +70,11 @@ export default function ExperienceCard({ experience }: Props) {
               ))}
             </ul>
           </div>
-          <button className="card-button">More info</button>
+          <button className="card-button" onClick={() => setIsFlipped(!isFlipped)}>More info</button>
         </article>
       </div>
       <div className="card bg-black">
-        <article className="flex flex-col text-center rounded-lg items-center p-5 space-y-1 md:space-y-7 md:p-10 flex-shrink-0 w-[325px] md:w-[600px] xl:w-[700px] snap-center cursor-pointer transition-opacity duration-200 overflow-hidden">
+        <article className="flex flex-col text-center rounded-lg items-center py-5 space-y-1 md:space-y-7 md:py-10 flex-shrink-0 w-[280px] md:w-[500px] xl:w-[600px] snap-center cursor-pointer transition-opacity duration-200 overflow-hidden">
           <motion.img
             initial={{
               y: -100,
@@ -95,7 +95,7 @@ export default function ExperienceCard({ experience }: Props) {
 
           <div className="px-0 md:px-10">
             <h4 className="text-base sm:text-xl md:text-2xl font-light">
-              Back
+              {experience?.jobTitle}
             </h4>
             <p className="text-base sm:text-lg md:text-xl font-bold mt-1">
               {experience?.company}
@@ -125,6 +125,7 @@ export default function ExperienceCard({ experience }: Props) {
               ))}
             </ul>
           </div>
+          <button className="card-button" onClick={() => setIsFlipped(!isFlipped)}>Prev</button>
         </article>
       </div>
     </ReactCardFlip>
