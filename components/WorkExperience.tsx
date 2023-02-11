@@ -22,14 +22,16 @@ export default function WorkExperience({ experiences }: Props) {
 
       <div className="w-full flex items-center justify-center overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Scrollbar, A11y]}
           spaceBetween={20}
           slidesPerView={1}
           navigation
-          pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => {}}
           onSlideChange={() => {}}
+          observer
+          observeParents
+          parallax
         >
           {experiences?.map((experience, index) => (
             <SwiperSlide

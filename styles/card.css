@@ -1,11 +1,34 @@
 .card {
-  box-shadow: 15px 15px 30px #1b1b1b, -15px -15px 30px #1b1b1b;
-  transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
-    transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  border-radius: 20px;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #008bf8;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
 }
 
 .card:hover {
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
-  transform: scale(1.05);
+  border-color: #008bf8;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
 }

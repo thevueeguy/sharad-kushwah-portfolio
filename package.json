@@ -26,6 +26,7 @@
     "next": "13.0.1",
     "next-sanity": "^1.0.9",
     "react": "18.2.0",
+    "react-card-flip": "^1.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.39.1",
     "react-simple-toasts": "^3.2.2",
