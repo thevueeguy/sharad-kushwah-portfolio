@@ -82,10 +82,10 @@ const Particle = () => {
               enable: true,
               area: 800,
             },
-            value: 20,
+            value: 15,
           },
           opacity: {
-            value: 0.2,
+            value: 0.3,
           },
           shape: {
             type: "circle",

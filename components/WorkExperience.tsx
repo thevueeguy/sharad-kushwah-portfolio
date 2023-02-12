@@ -3,8 +3,8 @@ import { Experience } from "../typings";
 import ExperienceCard from "./ExperienceCard";
 
 // import Swiper core and required modules
+import { A11y, Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 // Import Swiper styles
 import "swiper/css/bundle";
@@ -25,13 +25,13 @@ export default function WorkExperience({ experiences }: Props) {
           modules={[Navigation, Scrollbar, A11y]}
           spaceBetween={20}
           slidesPerView={1}
-          navigation
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => {}}
           onSlideChange={() => {}}
-          observer
-          observeParents
           parallax
+          observer
+          navigation
+          observeParents
         >
           {experiences?.map((experience, index) => (
             <SwiperSlide

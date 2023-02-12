@@ -1,7 +1,7 @@
 .card {
   border-radius: 20px;
   position: relative;
-  padding: 1.8rem 0;
+  padding: 1rem 0;
   border: 2px solid #c3c6ce;
   transition: 0.5s ease-out;
   overflow: visible;
@@ -12,7 +12,7 @@
   width: 60%;
   border-radius: 1rem;
   border: none;
-  background-color: #f80000;
+  background-color: #810000;
   color: #fff;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -24,7 +24,7 @@
 }
 
 .card:hover {
-  border-color: #008bf8;
+  border-color: #fff;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 

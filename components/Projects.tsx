@@ -51,7 +51,6 @@ export default function Projects({ projectData }: Props) {
                     initial={{ y: -200, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
-                    viewport={{ once: true }}
                     className="relative rounded-full h-24 w-24 sm:h-32 sm:w-32 xl:h-36 xl:w-36 mx-auto object-cover pt-0"
                     src={urlFor(project.image).url()}
                     alt="profile-photo"
@@ -95,7 +94,7 @@ export default function Projects({ projectData }: Props) {
           borderRadius: "0 1px 1px 0",
         }}
         transition={{ duration: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className="w-full absolute top-[30%] bg-white/10 left-0 h-[500px] skew-y-12"
       />
     </motion.div>
