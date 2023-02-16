@@ -28,6 +28,7 @@ export default function WorkExperience({ experiences }: Props) {
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => {}}
           onSlideChange={() => {}}
+          grabCursor
           parallax
           observer
           navigation

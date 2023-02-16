@@ -82,7 +82,7 @@ export default function Home({
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      <Particle />
+      {/* <Particle /> */}
     </div>
   );
 }

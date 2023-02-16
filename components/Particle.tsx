@@ -58,9 +58,9 @@ const Particle = () => {
           },
           links: {
             color: "#ffffff",
-            distance: 100,
+            distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.2,
             width: 1,
           },
           collisions: {
@@ -72,19 +72,19 @@ const Particle = () => {
             outModes: {
               default: "bounce",
             },
-            random: false,
+            random: true,
             speed: 2,
             straight: false,
           },
           number: {
             density: {
-              enable: true,
+              enable: false,
               area: 800,
             },
-            value: 15,
+            value: 20,
           },
           opacity: {
-            value: 0.3,
+            value: 0.5,
           },
           shape: {
             type: "circle",

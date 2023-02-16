@@ -33,6 +33,7 @@ export default function Hero({ pageInfo }: Props) {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
         className="z-20"
+
       >
         <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">
           {pageInfo?.role}
