@@ -20,9 +20,6 @@ export default function Hero({ pageInfo }: Props) {
       <BackgroundCircles />
       <div className="relative rounded-full h-32 w-32 mx-auto group">
         <motion.img
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
           className="absolute rounded-full h-32 w-32 mx-auto object-cover"
           src={urlFor(pageInfo?.heroImage).url()}
           alt="profile-photo"
@@ -33,7 +30,6 @@ export default function Hero({ pageInfo }: Props) {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
         className="z-20"
-
       >
         <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">
           {pageInfo?.role}
