@@ -20,6 +20,9 @@ export default function Hero({ pageInfo }: Props) {
       <BackgroundCircles />
       <div className="relative rounded-full h-32 w-32 mx-auto group">
         <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           className="absolute rounded-full h-32 w-32 mx-auto object-cover"
           src={urlFor(pageInfo?.heroImage).url()}
           alt="profile-photo"
