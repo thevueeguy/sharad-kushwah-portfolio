@@ -40,7 +40,7 @@ export default function ContactMe({ pageInfo }: Props) {
         className="flex flex-col space-y-10"
       >
         <h4 className="text-base sm:text-xl md:text-2xl font-semibold text-center">
-          I have got what you need.&nbsp;&nbsp;
+          I&#39;ve got what you need.&nbsp;&nbsp;
           <span className="decoration-red-800 underline text-base sm:text-xl md:text-2xl">
             Lets talk
           </span>

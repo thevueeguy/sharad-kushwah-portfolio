@@ -31,6 +31,7 @@ export default function Header({ socials }: Props) {
             <SocialIcon
               key={social._id}
               url={social.url}
+              target="_blank"
               fgColor="white"
               bgColor="transparent"
             />
@@ -55,7 +56,7 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1,
         }}
-        className="flex flex-row items-center text-white-300 cursor-pointer"
+        className="flex flex-row items-center text-white-300 cursor-pointer hover:text-red-400"
       >
         <SocialIcon
           className="cursor-pointer transition-all duration-200 hover:mr-1"
@@ -65,7 +66,7 @@ export default function Header({ socials }: Props) {
           url="#contact"
         />
         <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-sm text-white-400">
+          <p className="uppercase hidden md:inline-flex text-white-400">
             get in touch
           </p>
         </Link>
