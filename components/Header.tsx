@@ -35,7 +35,7 @@ export default function Header({ socials }: Props) {
               fgColor="white"
               bgColor="transparent"
             />
-            <p className="transition-all duration-300 ease-out opacity-50 w-0 overflow-hidden origin-top-left -rotate-12 group-hover:opacity-100 group-hover:w-fit group-hover:rotate-0">
+            <p className="transition-all duration-500 cursor-pointer ease-out opacity-50 w-0 overflow-hidden origin-top-left -rotate-12 group-hover:opacity-100 group-hover:w-fit group-hover:rotate-0">
               {social.title}
             </p>
           </div>
@@ -59,14 +59,14 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center text-white-300 cursor-pointer hover:text-red-400"
       >
         <SocialIcon
-          className="cursor-pointer transition-all duration-200 hover:mr-1"
+          className="cursor-pointer transition-all duration-300 hover:mr-1 "
           network="email"
           fgColor="white"
           bgColor="transparent"
           url="#contact"
         />
         <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-white-400">
+          <p className="uppercase hidden md:inline-flex text-white-400 hover:ml-1 transition-all duration-300">
             get in touch
           </p>
         </Link>
