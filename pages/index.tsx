@@ -7,7 +7,6 @@ import About from "../components/About";
 import ContactMe from "../components/ContactMe";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Particle from "../components/Particle";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
@@ -82,7 +81,6 @@ export default function Home({
         <ContactMe pageInfo={pageInfo} />
       </section>
 
-      {/* <Particle /> */}
     </div>
   );
 }
