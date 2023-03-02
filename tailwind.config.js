@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar")],
 };

@@ -23,7 +23,7 @@ export default function Hero({ pageInfo }: Props) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="absolute rounded-full h-32 w-32 mx-auto object-cover"
+          className="absolute rounded-full h-32 w-32 mx-auto mt-2 object-cover"
           src={urlFor(pageInfo?.heroImage).url()}
           alt="profile-photo"
         />

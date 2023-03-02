@@ -4,7 +4,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 rounded-full uppercase text-sm mx-1 my-2 opacity-80 hover:opacity-100 hover:rounded-full ;
+    @apply px-6 py-2 rounded-full uppercase text-sm mx-1 my-2 opacity-80 hover:opacity-100 hover:rounded-full;
   }
 
   .list-item-about {
@@ -12,11 +12,15 @@
   }
 
   .contactInput {
-    @apply  bg-slate-400/10 rounded-sm px-2 py-1 sm:px-4 sm:py-3 md:px-6 md:py-4 text-gray-400 placeholder-slate-400/60 ;
+    @apply bg-slate-400/10 rounded-sm px-2 py-1 sm:px-4 sm:py-3 md:px-6 md:py-4 text-gray-400 placeholder-slate-400/60;
   }
 
   .contactButton {
-    @apply  bg-red-700/60 uppercase rounded-md font-medium text-base sm:text-lg md:text-xl px-10 py-4 md:py-5 tracking-wider hover:bg-red-900;
+    @apply bg-red-700/60 uppercase rounded-md font-medium text-base sm:text-lg md:text-xl px-10 py-4 md:py-5 tracking-wider hover:bg-red-900;
+  }
+
+  .hexagon {
+    @apply before:absolute before:top-0 before:left-0 before:w-full before:h-full before:border-2 before:rotate-[60deg] before:border-[#484747] before:opacity-70 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:border-2 after:-rotate-[60deg] after:border-[#484747] after:opacity-70;
   }
 }
 
@@ -40,5 +44,3 @@
 .swiper-button-prev:after {
   font-weight: bold !important;
 }
-
-
