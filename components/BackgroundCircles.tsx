@@ -27,7 +27,7 @@ export default function BackgroundCircles({}: Props) {
           animation: "spin 15s linear infinite",
         }}
         transition={{
-          duration: 2.5,
+          duration: 3,
         }}
         className="absolute border border-[#484747] opacity-60 md:opacity-90 h-[200px] w-[200px] md:h-[300px] md:w-[300px] mt-52 animate-spin-slow hexagon"
       />
