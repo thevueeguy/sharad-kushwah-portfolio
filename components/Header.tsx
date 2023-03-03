@@ -27,7 +27,14 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center"
       >
         {socials?.map((social, index) => (
-          <div key={social._id} className="flex items-center group ">
+          <div
+            key={social._id}
+            className="flex items-center group"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(social.url, "_blank");
+            }}
+          >
             <SocialIcon
               key={social._id}
               url={social.url}

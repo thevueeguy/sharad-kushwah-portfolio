@@ -29,7 +29,7 @@ export default function BackgroundCircles({}: Props) {
         transition={{
           duration: 3,
         }}
-        className="absolute border border-[#484747] opacity-60 md:opacity-90 h-[200px] w-[200px] md:h-[300px] md:w-[300px] mt-52 animate-spin-slow hexagon"
+        className="absolute border border-[#484747] opacity-75 md:opacity-90 h-[200px] w-[200px] md:h-[300px] md:w-[300px] mt-52 animate-spin-slow hexagon"
       />
       <div className="absolute border border-[#2c2c2c] opacity-90 rounded-full h-[280px] w-[280px] md:h-[520px] md:w-[520px] mt-52" />
       <div className="absolute border border-gray-500 opacity-70 rounded-full h-[350px] w-[350px] md:h-[650px] md:w-[650px] mt-52 animate-pulse" />
