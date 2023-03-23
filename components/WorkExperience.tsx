@@ -34,7 +34,7 @@ export default function WorkExperience({ experiences }: Props) {
           navigation
           observeParents
         >
-          {experiences?.map((experience, index) => (
+          {experiences?.sort((a,b) => a.jobTitle.localeCompare(b.jobTitle)).map((experience, index) => (
             <SwiperSlide
               key={experience._createdAt}
               virtualIndex={index}
