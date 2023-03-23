@@ -7,6 +7,9 @@ type Props = {
 };
 
 export default function ExperienceCard({ experience }: Props) {
+  const startDate = new Date(experience?.dateStarted);
+  const endDate = new Date(experience?.dateEnded);
+
   return (
     <div className="card bg-black">
       <article className="flex flex-col text-center rounded-lg items-center p-5 space-y-1 md:space-y-7 md:p-10 flex-shrink-0 w-[325px] md:w-[600px] xl:w-[700px] snap-center cursor-pointer transition-opacity duration-200 overflow-hidden">
@@ -46,10 +49,14 @@ export default function ExperienceCard({ experience }: Props) {
             ))}
           </div>
           <p className="uppercase py-5 text-gray-300">
-            {new Date(experience?.dateStarted).toDateString()} -{" "}
+            {`FROM ${startDate.toLocaleString("default", {
+              month: "short",
+            })} ${startDate.getFullYear()}`}
             {experience?.isCurrentlyWorkingHere
               ? "Present"
-              : new Date(experience?.dateEnded).toDateString()}
+              : ` TO ${endDate.toLocaleString("default", {
+                  month: "short",
+                })} ${endDate.getFullYear()}`}
           </p>
 
           <ul className="scrollbar-thin pr-2 scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc ">
