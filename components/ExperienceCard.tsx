@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { Experience } from "../typings";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 type Props = {
   experience: Experience;
@@ -11,27 +13,25 @@ export default function ExperienceCard({ experience }: Props) {
   const endDate = new Date(experience?.dateEnded);
 
   return (
-    <div className="card bg-black">
-      <article className="flex flex-col text-center rounded-lg items-center p-5 space-y-1 md:space-y-7 md:p-10 flex-shrink-0 w-[325px] md:w-[600px] xl:w-[700px] snap-center cursor-pointer transition-opacity duration-200 overflow-hidden">
-        <motion.img
-          initial={{
-            y: -100,
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          viewport={{ once: true }}
-          className="rounded-md object-cover object-center h-24 w-24 md:h-28 md:w-28"
-          src={urlFor(experience?.companyImage).url()}
-          alt=""
-        />
-
-        <div className="px-0 md:px-10">
+    <VerticalTimelineElement
+      contentStyle={{
+        background: "black",
+      }}
+      contentArrowStyle={{ borderRight: "10px solid  white" }}
+      date={experience.company}
+      iconStyle={{ background: "white" }}
+      icon={
+        <div className="flex justify-center items-center w-full h-full">
+          <motion.img
+            src={urlFor(experience?.companyImage).url()}
+            alt={experience.company}
+            className="w-[80%] h-[80%] object-contain"
+          />
+        </div>
+      }
+    >
+      <article className="flex flex-col text-center rounded-lg items-center space-y-1 md:space-y-7 snap-center cursor-pointer transition-opacity duration-200">
+        <div className="px-0 md:px-5">
           <h4 className="text-base sm:text-xl md:text-2xl font-light">
             {experience?.jobTitle}
           </h4>
@@ -59,15 +59,15 @@ export default function ExperienceCard({ experience }: Props) {
                 })} ${endDate.getFullYear()}`}
           </p>
 
-          <ul className="scrollbar-thin pr-2 scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc ">
+          <ul className="scrollbar-thin scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc ">
             {experience?.points.map((point, index) => (
-              <li key={index} className="mb-2 text-xs sm:text-md md:text-xl ">
+              <li key={index} className="mb-2 text-xs md:text-base ">
                 {point}
               </li>
             ))}
           </ul>
         </div>
       </article>
-    </div>
+    </VerticalTimelineElement>
   );
 }
