@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Hero({ pageInfo }: Props) {
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: ["Namaskaram!", `I am ${pageInfo?.name}`, "<Welcome />"],
     loop: true,
     delaySpeed: 2000,
@@ -37,9 +37,9 @@ export default function Hero({ pageInfo }: Props) {
         <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-xl md:text-2xl font-semibold px-10 py-2">
-          <span className="mr-3">{text}</span>
-          <Cursor cursorColor="red" />
+        <h1 className="text-lg md:text-xl font-semibold px-10 py-2">
+          <span className="mr-1">{text}</span>
+          <Cursor cursorColor="#f1b05a" />
         </h1>
 
         <div className="pt-8">
