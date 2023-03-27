@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
+    "@react-three/drei": "^9.58.4",
+    "@react-three/fiber": "^8.12.0",
     "@sanity/image-url": "^1.0.1",
     "@vercel/analytics": "^0.1.3",
     "eslint": "^8.27.0",
@@ -30,6 +32,7 @@
     "react-social-icons": "^5.15.0",
     "react-vertical-timeline-component": "^3.6.0",
     "swiper": "^9.0.2",
+    "three": "^0.150.1",
     "typescript": "4.8.4"
   },
   "devDependencies": {
@@ -37,6 +40,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-vertical-timeline-component": "^3.3.3",
+    "@types/three": "^0.149.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.18",
     "tailwind-scrollbar": "^2.0.1",

@@ -7,7 +7,7 @@ import "../styles/bubbles.css";
 import "../styles/contact-button.css";
 import "../styles/cube.css";
 import "../styles/hero-button.css";
-import "../styles/input-border.css";
+import "../styles/loader.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

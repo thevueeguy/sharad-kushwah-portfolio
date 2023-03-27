@@ -34,10 +34,10 @@ export default function Hero({ pageInfo }: Props) {
         transition={{ duration: 2 }}
         className="z-20"
       >
-        <h2 className="text-sm sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">
+        <h2 className="text-xs sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-lg md:text-xl font-semibold px-10 py-2">
+        <h1 className="text-sm sm:text-base md:text-xl font-semibold px-10 py-2">
           <span className="mr-1">{text}</span>
           <Cursor cursorColor="#f1b05a" />
         </h1>
