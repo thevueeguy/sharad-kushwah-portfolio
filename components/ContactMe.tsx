@@ -73,7 +73,7 @@ export default function ContactMe({ pageInfo }: Props) {
         
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-3 mx-auto lg:w-[70%] h-auto"
+            className="flex flex-col space-y-3 mx-auto w-[70%] h-auto"
           >
             {["name", "email", "subject", "message"].map((item: any, index) => (
               <div key={index}>
