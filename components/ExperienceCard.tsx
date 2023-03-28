@@ -18,7 +18,6 @@ export default function ExperienceCard({ experience }: Props) {
         background: "black",
       }}
       contentArrowStyle={{ borderRight: "10px solid  white" }}
-      date={experience.company}
       iconStyle={{ background: "white" }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
@@ -30,15 +29,15 @@ export default function ExperienceCard({ experience }: Props) {
         </div>
       }
     >
-      <article className="flex flex-col text-center rounded-lg items-center space-y-1 md:space-y-7 snap-center cursor-pointer transition-opacity duration-200">
-        <div className="px-0 md:px-5">
+      <article className="rounded-lg w-full snap-center cursor-pointer transition-opacity duration-200">
+        <div className="px-0 md:px-5 flex flex-col justify-center items-center text-center space-y-1 md:space-y-7">
           <h4 className="text-base sm:text-xl md:text-2xl font-light">
             {experience?.jobTitle}
           </h4>
-          <p className="text-base sm:text-lg md:text-xl font-bold mt-1">
+          <p className="text-base sm:text-lg md:text-xl font-bold">
             {experience?.company}
           </p>
-          <div className="flex space-x-2 my-2 lg:my-5 justify-center flex-wrap">
+          <div className="flex space-x-2 w-2/3 flex-wrap justify-center">
             {experience?.technologies.map((technology) => (
               <motion.img
                 key={technology._id}
@@ -48,7 +47,7 @@ export default function ExperienceCard({ experience }: Props) {
               />
             ))}
           </div>
-          <p className="uppercase py-5 text-gray-300">
+          <p className="uppercase text-gray-300">
             {`FROM ${startDate.toLocaleString("default", {
               month: "short",
             })} ${startDate.getFullYear()}`}
