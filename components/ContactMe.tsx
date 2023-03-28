@@ -33,16 +33,21 @@ export default function ContactMe({ pageInfo }: Props) {
   };
 
   return (
-    <div className="h-screen py-10 flex relative flex-col text-center md:text-left md:flex-row max-w-7xl space-y-3 sm:space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10 justify-evenly items-center mx-auto">
-      <h3 className="mt-10 xl:absolute xl:top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10 justify-evenly items-center mx-auto mb-20 lg:mb-0">
+      <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
         &nbsp;Contact
       </h3>
-      <div className="flex flex-col-reverse xl:flex-row overflow-hidden h-full w-full items-center justify-center">
+
+      <div className="flex flex-col lg:flex-row pt-28 space-y-10 items-center justify-center h-full w-full"> 
+        <div className="h-full w-full md:h-1/2 md:w-1/2">
+          <EarthCanvas />
+        </div>
+        
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col space-y-10 w-full xl:w-1/2"
+          className="flex flex-col space-y-6 w-full xl:w-1/2"
         >
           <h4 className="text-sm sm:text-lg md:text-xl font-semibold text-center">
             I&#39;ve got what you need.&nbsp;&nbsp;
@@ -50,7 +55,7 @@ export default function ContactMe({ pageInfo }: Props) {
               Lets talk
             </span>
           </h4>
-
+        
           <div className="space-y-2 sm:space-y-4 md:space-y-5 lg:space-x-6 xl:space-y-8">
             <div className="flex items-center space-x-5 justify-center">
               <BuildingLibraryIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7  animate-pulse" />
@@ -58,56 +63,29 @@ export default function ContactMe({ pageInfo }: Props) {
             </div>
             <div className="flex items-center space-x-5 justify-center">
               <MapPinIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-              <p className="text-sm sm:text-lg md:text-xl">
-                {pageInfo?.address}
-              </p>
+              <p className="text-sm sm:text-lg md:text-xl">{pageInfo?.address}</p>
             </div>
             <div className="flex items-center space-x-5 justify-center">
               <EnvelopeIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-              <p className="text-sm sm:text-lg md:text-xl">
-                {pageInfo?.email}
-              </p>
+              <p className="text-sm sm:text-lg md:text-xl">{pageInfo?.email}</p>
             </div>
           </div>
-
+        
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-3 mx-auto w-[70%] h-auto"
+            className="flex flex-col space-y-3 mx-auto lg:w-[70%] h-auto"
           >
-            <div>
-              <input
-                {...register("name")}
-                placeholder="Name"
-                className="contactInput w-full"
-                type="text"
-              />
-            </div>
-
-            <div>
-              <input
-                {...register("email")}
-                placeholder="Email"
-                className="contactInput w-full"
-                type="email"
-              />
-            </div>
-
-            <div>
-              <input
-                {...register("subject")}
-                placeholder="Subject"
-                className="contactInput w-full"
-                type="text"
-              />
-            </div>
-            <div>
-              <input
-                {...register("message")}
-                placeholder="Message"
-                className="contactInput w-full"
-              />
-            </div>
-
+            {["name", "email", "subject", "message"].map((item: any, index) => (
+              <div key={index}>
+                <input
+                  {...register(item)}
+                  placeholder={item[0].toUpperCase() + item.slice(1)}
+                  className="contactInput w-full placeholder:text-sm placeholder:sm:text-lg placeholder:md:text-xl"
+                  type={item === "email" ? item : "text"}
+                />
+              </div>
+            ))}
+        
             <button className="contactButton">
               <div className="svg-wrapper-1 pr-3">
                 <div className="svg-wrapper">
@@ -129,29 +107,7 @@ export default function ContactMe({ pageInfo }: Props) {
             </button>
           </form>
         </motion.div>
-
-        <motion.div
-          variants={{
-            hidden: {
-              x: "100%",
-              y: 0,
-            },
-            show: {
-              x: 0,
-              y: 0,
-              transition: {
-                type: "tween",
-                delay: 0.2,
-                duration: 1,
-                ease: "easeOut",
-              },
-            },
-          }}
-          className="h-full w-full xl:h-2/3  xl:w-1/2"
-        >
-          <EarthCanvas />
-        </motion.div>
-      </div>
+      </div >
     </div>
   );
 }

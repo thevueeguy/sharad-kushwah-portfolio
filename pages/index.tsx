@@ -37,7 +37,7 @@ export default function Home({
   socials,
 }: Props) {
   return (
-    <div className="bg-black relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
+    <div className="bg-black w-full relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.6 }}
