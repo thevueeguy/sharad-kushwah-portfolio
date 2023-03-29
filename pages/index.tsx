@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 
 // Components
 import About from "../components/About";
-import ContactMe from "../components/ContactMe";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
+const ContactMe = dynamic(() => import('../components/ContactMe'), {
+  loading: () => <p>Loading...</p>,
+})
 
 // Type definition
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
