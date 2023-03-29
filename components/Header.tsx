@@ -66,14 +66,14 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center text-white-300 cursor-pointer hover:text-[#f1b05a]"
       >
         <SocialIcon
-          className="cursor-pointer transition-all duration-200 hover:mr-1 "
+          className="cursor-pointer transition-all duration-200"
           network="email"
           fgColor="white"
           bgColor="transparent"
           url="#contact"
         />
         <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-white-400 hover:ml-1 transition-all duration-200">
+          <p className="uppercase hidden md:inline-flex text-white-400 transition-all duration-200">
             get in touch
           </p>
         </Link>
