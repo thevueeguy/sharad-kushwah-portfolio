@@ -10,7 +10,6 @@ export default function BackgroundCircles({}: Props) {
       }}
       animate={{
         scale: [1, 2, 2, 4, 1],
-        bottom: [0, 70, 90, 150, 0],
         opacity: [0.1, 0.5, 1, 1, 1, 0.8],
         borderRadius: ["20%", "20%", "50%", "80%", "10%"],
       }}
