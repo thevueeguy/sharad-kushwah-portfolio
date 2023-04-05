@@ -12,9 +12,9 @@ export default function About({ pageInfo }: Props) {
       <h3 className="absolute uppercase top-10 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
         &nbsp;About
       </h3>
-  
+
       <div className="cube -mb-20 mt-20 md:mb-0 mx-5 lg:mx-20 flex flex-shrink-0 flex-col md:flex-row object-cover w-44 h-44 sm:w-60 sm:h-60 md:w-96 md:h-96 xl:w-auto xl:h-auto">
-        <div className="topD"></div> 
+        <div className="topD"></div>
         <div>
           <span style={{ ["--i" as string]: 0 }}></span>
           <span style={{ ["--i" as string]: 1 }}></span>
@@ -57,36 +57,35 @@ export default function About({ pageInfo }: Props) {
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
         <p className="text-[#e9e5e5] text-sm sm:text-lg">
-          I&quot;m a final year undergraduate student pursuing my bachelor of
-          technology in the department of Electrical Engineering. I am
-          passionate about programming. Currently i am honing my skills,
-          exploring and enhancing knowledge in different technologies.
+          I&quot;m Sharad Kushwah, a dedicated frontend web developer who is
+          passionate about building robust and responsive web applications.
+          Pursuing my Bachelor of Technology in Electrical Engineering from
+          Madhav Institute of Technology and Science in Gwalior, India, I have
+          honed my skills in various programming languages such as C++, C, Java,
+          JavaScript, and Typescript. I have a GPA of 8.50, and I am committed
+          to staying up-to-date with the latest technologies and frameworks to
+          improve my skills.
         </p>
-        <ul className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
-          <li className="list-item-about">
-            While doing competitive programming in <b>C++</b> and{" "}
-            <b>Javascript</b> I have solved <b>500+</b> problems across several
-            coding platforms up until now .
-          </li>
-          <li className="list-item-about">
-            I am a <b>MERN</b> stack developer.
-          </li>
-          <li className="list-item-about">
-            I have <b>2+</b> years of experience in teaching Mathematics.
-          </li>
-          <li className="list-item-about">
-            <b>Secured Rank 1</b> in college level coding contest.
-          </li>
-          <li className="list-item-about">
-            I have working knowledge of <b>Cybersecurity</b>.
-          </li>
-        </ul>
+        <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
+          <p>
+            With experience in competitive programming using C++ and JavaScript,
+            I have successfully solved over 500 problems across various coding
+            platforms. I specialize in the MERN stack and have worked as a
+            Mathematics teacher for over two years.
+          </p>
+          <p>
+            I have secured first place in a college-level coding contest and I
+            have a working knowledge of cybersecurity. I strive to improve my
+            problem-solving abilities and maintain a learning attitude to become
+            a skilled software engineer.
+          </p>
+        </div>
         <hr />
         <p className="text-[#e9e5e5] text-sm sm:text-lg">
-          My aim is to keep getting better at problem-solving and to always keep
-          a learning attitude in order to become a very good software engineer.
-          Besides academics I love to read philosophy, practice meditation and
-          workout in the gym.
+          In my free time, I enjoy watching technology-related videos, relaxing
+          with Netflix, and reading philosophy. I am always looking for
+          opportunities to enhance my skills and work on challenging projects.
+          Please feel free to connect with me on LinkedIn or drop me an email.
         </p>
       </motion.div>
     </div>
