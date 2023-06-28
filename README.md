@@ -1,6 +1,6 @@
 2xl > xl > lg > md > sm > xs   (Screen sizes in decending order for reference)
 
-Author - Sharad Kushwah
+Author - Sharad Kushwah  
 Linkedin - https://www.linkedin.com/in/sharad-kushwah/
 
 Libraries Used :
