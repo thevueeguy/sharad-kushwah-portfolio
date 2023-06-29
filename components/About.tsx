@@ -41,7 +41,6 @@ export default function About({ pageInfo }: Props) {
           </div>
         </div>
       </div>
-
       <motion.div
         initial={{
           x: 200,
@@ -56,7 +55,7 @@ export default function About({ pageInfo }: Props) {
         }}
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
-        <p className="text-[#e9e5e5] text-sm sm:text-lg">
+        <p className="text-[#e9e5e5] text-sm sm:text-base md:text-base lg:text-base ">
           I&quot;m Sharad Kushwah, a dedicated frontend web developer who is
           passionate about building robust and responsive web applications.
           Pursuing my Bachelor of Technology in Electrical Engineering from
@@ -66,7 +65,7 @@ export default function About({ pageInfo }: Props) {
           to staying up-to-date with the latest technologies and frameworks to
           improve my skills.
         </p>
-        <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
+        <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-base">
           <p>
             With experience in competitive programming using C++ and JavaScript,
             I have successfully solved over 500 problems across various coding
@@ -81,7 +80,7 @@ export default function About({ pageInfo }: Props) {
           </p>
         </div>
         <hr />
-        <p className="text-[#e9e5e5] text-sm sm:text-lg">
+        <p className="text-[#e9e5e5] text-sm sm:text-base">
           In my free time, I enjoy watching technology-related videos, relaxing
           with Netflix, and reading philosophy. I am always looking for
           opportunities to enhance my skills and work on challenging projects.

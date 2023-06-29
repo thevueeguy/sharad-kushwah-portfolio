@@ -71,7 +71,7 @@ export default function Projects({ projectData }: Props) {
                       ))}
                     </div>
 
-                    <p className="text-[#e9e5e5] text-center text-xs sm:text-lg md:text-xl lg:text-left ">
+                    <p className="text-[#e9e5e5] text-center text-xs sm:text-base md:text-base lg:text-left ">
                       {project?.summary}
                     </p>
                   </div>
