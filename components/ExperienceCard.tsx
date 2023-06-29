@@ -54,9 +54,9 @@ export default function ExperienceCard({ experience }: Props) {
               {`FROM ${startDate.toLocaleString("default", {
                 month: "short",
               })} ${startDate.getFullYear()}`}
-              {experience?.isCurrentlyWorkingHere
-                ? "Present"
-                : ` TO ${endDate.toLocaleString("default", {
+              {experience?.isCurrentWorkingHere
+                ? " - Present"
+                : ` To ${endDate.toLocaleString("default", {
                     month: "short",
                   })} ${endDate.getFullYear()}`}
             </div>
