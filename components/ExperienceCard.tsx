@@ -3,6 +3,7 @@ import { urlFor } from "../sanity";
 import { Experience } from "../typings";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import NoSSRComponent from "./NoSSR";
 
 type Props = {
   experience: Experience;
@@ -34,9 +35,9 @@ export default function ExperienceCard({ experience }: Props) {
           <h4 className="text-base sm:text-xl md:text-2xl font-light">
             {experience?.jobTitle}
           </h4>
-          <p className="text-base sm:text-lg md:text-xl font-bold">
+          <div className="text-base sm:text-lg md:text-xl font-bold">
             {experience?.company}
-          </p>
+          </div>
           <div className="flex space-x-2 w-2/3 flex-wrap justify-center">
             {experience?.technologies.map((technology) => (
               <motion.img
@@ -47,20 +48,23 @@ export default function ExperienceCard({ experience }: Props) {
               />
             ))}
           </div>
-          <p className="uppercase text-gray-300">
-            {`FROM ${startDate.toLocaleString("default", {
-              month: "short",
-            })} ${startDate.getFullYear()}`}
-            {experience?.isCurrentlyWorkingHere
-              ? "Present"
-              : ` TO ${endDate.toLocaleString("default", {
-                  month: "short",
-                })} ${endDate.getFullYear()}`}
-          </p>
+
+          <NoSSRComponent>
+            <div className="uppercase text-gray-300">
+              {`FROM ${startDate.toLocaleString("default", {
+                month: "short",
+              })} ${startDate.getFullYear()}`}
+              {experience?.isCurrentWorkingHere
+                ? " - Present"
+                : ` To ${endDate.toLocaleString("default", {
+                    month: "short",
+                  })} ${endDate.getFullYear()}`}
+            </div>
+          </NoSSRComponent>
 
           <ul className="scrollbar-thin scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc ">
             {experience?.points.map((point, index) => (
-              <li key={index} className="mb-2 text-xs md:text-base ">
+              <li key={index} className="mb-2 text-xs md:text-sm ">
                 {point}
               </li>
             ))}

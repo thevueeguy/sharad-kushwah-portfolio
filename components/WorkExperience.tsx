@@ -16,10 +16,14 @@ export default function WorkExperience({ experiences }: Props) {
 
       <VerticalTimeline>
         {experiences
-          ?.sort((a, b) => a.jobTitle.localeCompare(b.jobTitle))
-          .map((experience) => (
-            <ExperienceCard key={experience._id} experience={experience} />
-          ))}
+          ?.sort(
+            (a, b) => Date.parse(a.dateStarted) - Date.parse(b.dateStarted)
+          )
+          .map((experience) => {
+            return (
+              <ExperienceCard key={experience._id} experience={experience} />
+            );
+          })}
       </VerticalTimeline>
     </motion.div>
   );

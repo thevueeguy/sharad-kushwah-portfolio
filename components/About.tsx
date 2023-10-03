@@ -41,7 +41,6 @@ export default function About({ pageInfo }: Props) {
           </div>
         </div>
       </div>
-
       <motion.div
         initial={{
           x: 200,
@@ -67,7 +66,7 @@ export default function About({ pageInfo }: Props) {
           JavaScript. I am a dedicated learner and always strive to keep myself
           updated with the latest technologies and frameworks.
         </p>
-        <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
+        <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-base">
           <p>
             I have hands-on experience in using frameworks such as ReactJS,
             NextJS, ExpressJS, Tailwind, Bootstrap, and Chakra UI, along with
