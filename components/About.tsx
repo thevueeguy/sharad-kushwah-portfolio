@@ -13,7 +13,7 @@ export default function About({ pageInfo }: Props) {
         &nbsp;About
       </h3>
 
-      <div className="cube -mb-20 mt-20 md:mb-0 mx-5 lg:mx-20 flex flex-shrink-0 flex-col md:flex-row object-cover w-44 h-44 sm:w-60 sm:h-60 md:w-96 md:h-96 xl:w-auto xl:h-auto">
+      <div className="cube -mb-20 mt-30 md:mb-0 mx-5 lg:mx-20 flex flex-shrink-0 flex-col md:flex-row object-cover w-44 h-44 sm:w-60 sm:h-60 md:w-96 md:h-96 xl:w-auto xl:h-auto">
         <div className="topD"></div>
         <div>
           <span style={{ ["--i" as string]: 0 }}></span>
@@ -57,35 +57,37 @@ export default function About({ pageInfo }: Props) {
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
         <p className="text-[#e9e5e5] text-sm sm:text-lg">
-          I&quot;m Sharad Kushwah, a dedicated frontend web developer who is
-          passionate about building robust and responsive web applications.
-          Pursuing my Bachelor of Technology in Electrical Engineering from
-          Madhav Institute of Technology and Science in Gwalior, India, I have
-          honed my skills in various programming languages such as C++, C, Java,
-          JavaScript, and Typescript. I have a GPA of 8.50, and I am committed
-          to staying up-to-date with the latest technologies and frameworks to
-          improve my skills.
+          I&quot;m Sharad Kushwah, a dedicated software engineer who is
+          passionate about building robust and responsive web applications. I am
+          passionate about creating innovative solutions to complex problems. I
+          have worked on a wide range of projects, from developing
+          enterprise-level applications to designing and implementing
+          user-friendly interfaces for consumer-facing products. I have gained a
+          strong foundation in programming languages such as C++, C, Java and
+          JavaScript. I am a dedicated learner and always strive to keep myself
+          updated with the latest technologies and frameworks.
         </p>
         <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-lg">
           <p>
-            With experience in competitive programming using C++ and JavaScript,
-            I have successfully solved over 500 problems across various coding
-            platforms. I specialize in the MERN stack and have worked as a
-            Mathematics teacher for over two years.
+            I have hands-on experience in using frameworks such as ReactJS,
+            NextJS, ExpressJS, Tailwind, Bootstrap, and Chakra UI, along with
+            tools such as Postman, VS Code, GIT, IntelliJ IDEA and Sublime-text.
           </p>
           <p>
-            I have secured first place in a college-level coding contest and I
-            have a working knowledge of cybersecurity. I strive to improve my
-            problem-solving abilities and maintain a learning attitude to become
-            a skilled software engineer.
+            Apart from my technical skills, I possess excellent soft skills such
+            as problem-solving, flexibility, teamwork, and time management. I
+            have completed relevant coursework in Data Structures, Algorithms
+            Analysis, Cyber Security, Version Control, Frontend Development, and
+            Backend Development.
           </p>
         </div>
         <hr />
         <p className="text-[#e9e5e5] text-sm sm:text-lg">
-          In my free time, I enjoy watching technology-related videos, relaxing
-          with Netflix, and reading philosophy. I am always looking for
-          opportunities to enhance my skills and work on challenging projects.
-          Please feel free to connect with me on LinkedIn or drop me an email.
+          During my leisure time, I enjoy watching technology-related videos and
+          relaxing with Netflix. Additionally, I have a keen interest in reading
+          philosophy. I am always looking for opportunities to enhance my skills
+          and work on challenging projects. Please feel free to connect with me
+          on LinkedIn or drop me an email.
         </p>
       </motion.div>
     </div>
