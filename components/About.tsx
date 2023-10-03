@@ -9,11 +9,11 @@ type Props = {
 export default function About({ pageInfo }: Props) {
   return (
     <div className="h-screen flex flex-col relative text-center mb-20 md:text-left md:flex-row max-w-7xl px-10 justify-evenly items-center mx-auto ">
-      <h3 className="absolute uppercase top-10 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      <h3 className="absolute uppercase top-10 tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">
         &nbsp;About
       </h3>
 
-      <div className="cube -mb-20 mt-30 md:mb-0 mx-5 lg:mx-20 flex flex-shrink-0 flex-col md:flex-row object-cover w-44 h-44 sm:w-60 sm:h-60 md:w-96 md:h-96 xl:w-auto xl:h-auto">
+      <div className="cube -mb-20 mt-28 md:mb-0 mx-5 lg:mx-20 flex flex-shrink-0 flex-col md:flex-row md:mt-20 object-cover w-44 h-44 sm:w-60 sm:h-60 md:w-96 md:h-96 xl:w-auto xl:h-auto">
         <div className="topD"></div>
         <div>
           <span style={{ ["--i" as string]: 0 }}></span>
@@ -55,7 +55,7 @@ export default function About({ pageInfo }: Props) {
         }}
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
-        <p className="text-[#e9e5e5] text-sm sm:text-lg">
+        <p className="text-[#e9e5e5] text-xs sm:text-base">
           I&quot;m Sharad Kushwah, a dedicated software engineer who is
           passionate about building robust and responsive web applications. I am
           passionate about creating innovative solutions to complex problems. I
@@ -81,7 +81,7 @@ export default function About({ pageInfo }: Props) {
           </p>
         </div>
         <hr />
-        <p className="text-[#e9e5e5] text-sm sm:text-lg">
+        <p className="text-[#e9e5e5] text-xs sm:text-base">
           During my leisure time, I enjoy watching technology-related videos and
           relaxing with Netflix. Additionally, I have a keen interest in reading
           philosophy. I am always looking for opportunities to enhance my skills

@@ -34,7 +34,7 @@ export default function ContactMe({ pageInfo }: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl space-y-5 md:space-y-6 lg:space-x-7 xl:space-y-10 justify-evenly items-center mx-auto mb-20 lg:mb-0">
-      <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">
         &nbsp;Contact
       </h3>
 
@@ -56,7 +56,7 @@ export default function ContactMe({ pageInfo }: Props) {
             </span>
           </h4>
         
-          <div className="space-y-2 sm:space-y-4 md:space-y-5 lg:space-x-6 xl:space-y-8">
+          <div className="space-y-2 sm:space-y-4 md:space-y-5 lg:space-x-6">
             <div className="flex items-center space-x-5 justify-center">
               <BuildingLibraryIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7  animate-pulse" />
               <p className="text-sm sm:text-lg md:text-xl">MITS</p>

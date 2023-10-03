@@ -15,7 +15,7 @@ export default function Skills({ skills }: Props) {
       viewport={{ once: true }}
       className="flex relative overflow-hidden flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto">
+      <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">
         &nbsp;Skills
       </h3>
       <h3 className="absolute top-24 uppercase tracking-[3px] text-gray-500 text-xs sm:text-sm md:text-lg">
