@@ -56,7 +56,7 @@ export default function About({ pageInfo }: Props) {
         className="space-y-5 text-lg px-0 pt-20 md:px-10"
       >
         <p className="text-[#e9e5e5] text-xs sm:text-base">
-          I&quot;m Sharad Kushwah, a dedicated software engineer who is
+          I&#39;m Sharad Kushwah, a dedicated software engineer who is
           passionate about building robust and responsive web applications. I am
           passionate about creating innovative solutions to complex problems. I
           have worked on a wide range of projects, from developing
