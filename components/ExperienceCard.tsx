@@ -42,7 +42,7 @@ export default function ExperienceCard({ experience }: Props) {
             {experience?.technologies.map((technology) => (
               <motion.img
                 key={technology._id}
-                className="h-8 w-8 md:h-10 md:w-10 lg:h-14 lg:w-14 rounded-full bg-white border-2 border-sky-600"
+                className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 rounded-full bg-white border-2 border-sky-600"
                 src={urlFor(technology.image).url()}
                 alt={technology.title}
               />
@@ -62,9 +62,9 @@ export default function ExperienceCard({ experience }: Props) {
             </div>
           </NoSSRComponent>
 
-          <ul className="scrollbar-thin scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc ">
+          <ul className="scrollbar-thin scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc">
             {experience?.points.map((point, index) => (
-              <li key={index} className="mb-2 text-xs md:text-sm ">
+              <li key={index} className="mb-2 text-xs md:text-base text-left leading-tight">
                 {point}
               </li>
             ))}
