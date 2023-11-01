@@ -5,6 +5,7 @@ import pageInfo from './pageInfo'
 import project from './project'
 import skill from './skill'
 import social from './social'
+import certificate from './certificate'
 
 export default createSchema({
   name: 'default',
@@ -13,6 +14,7 @@ export default createSchema({
     pageInfo,
     project,
     skill,
-    social
+    social,
+    certificate
   ]),
 })
