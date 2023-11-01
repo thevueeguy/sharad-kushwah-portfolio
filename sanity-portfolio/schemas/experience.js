@@ -17,6 +17,11 @@ export default {
         },
       },
       {
+        name: "summary",
+        title: "Summary",
+        type: "text",
+      },
+      {
         name: "company",
         title: "Company",
         type: "text",

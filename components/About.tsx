@@ -57,8 +57,7 @@ export default function About({ pageInfo }: Props) {
       >
         <p className="text-[#e9e5e5] text-xs sm:text-base">
           I&#39;m Sharad Kushwah, a dedicated software engineer who is
-          passionate about building robust and responsive web applications. I am
-          passionate about creating innovative solutions to complex problems. I
+          passionate about building robust and responsive web applications. I
           have worked on a wide range of projects, from developing
           enterprise-level applications to designing and implementing
           user-friendly interfaces for consumer-facing products. I have gained a
@@ -68,9 +67,9 @@ export default function About({ pageInfo }: Props) {
         </p>
         <div className="space-y-1 hidden lg:block list-disc text-sm sm:text-base">
           <p>
-            I have hands-on experience in using frameworks such as ReactJS,
-            NextJS, ExpressJS, Tailwind, Bootstrap, and Chakra UI, along with
-            tools such as Postman, VS Code, GIT, IntelliJ IDEA and Sublime-text.
+            I have hands-on experience in using various frameworks and libraries such as ReactJS,
+            NextJS, ExpressJS, Angular, SpringBoot, Tailwind, Bootstrap, and Chakra UI, along with
+            tools such as Postman, Eclipse, VS Code, GIT, IntelliJ IDEA and Sublime-text.
           </p>
           <p>
             Apart from my technical skills, I possess excellent soft skills such
