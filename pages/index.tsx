@@ -112,8 +112,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       experiences,
       projects,
       skills,
-      socials
-    }
+      socials,
+    },
 
     // -next js will regenerate the page every 10 seconds
     // -when a request comes in
