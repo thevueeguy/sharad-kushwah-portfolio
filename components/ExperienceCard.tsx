@@ -19,7 +19,7 @@ export default function ExperienceCard({ experience }: Props) {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "black",
+        background: "transparent",
         maxWidth: "500px"
       }}
       contentArrowStyle={{ borderRight: "10px solid  white" }}
@@ -39,10 +39,10 @@ export default function ExperienceCard({ experience }: Props) {
           <h4 className="text-base sm:text-xl md:text-2xl font-light">
             {experience?.jobTitle}
           </h4>
-          <div className="text-base sm:text-lg md:text-xl font-bold">
+          <div className="text-base sm:text-lg md:text-xl font-bold py-1">
             {experience?.company}
           </div>
-          <div className="flex space-x-2 w-2/3 flex-wrap justify-center">
+          <div className="flex space-x-2 w-2/3 flex-wrap justify-center py-1">
             {experience?.technologies.map((technology) => (
               <motion.img
                 key={technology._id}
@@ -54,7 +54,7 @@ export default function ExperienceCard({ experience }: Props) {
           </div>
 
           <NoSSRComponent>
-            <div className="uppercase text-gray-300">
+            <div className="uppercase text-gray-300 py-1">
               {`FROM ${startDate.toLocaleString("default", {
                 month: "short",
               })} ${startDate.getFullYear()}`}
