@@ -72,7 +72,7 @@ export default function Header({ socials }: Props) {
           bgColor="transparent"
           url="#contact"
         />
-        <Link href="#contact">
+        <Link href="contact">
           <p className="uppercase hidden md:inline-flex text-white-400 transition-all duration-200">
             get in touch
           </p>

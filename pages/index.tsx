@@ -24,7 +24,6 @@ const Loader = () => {
 
 // Components
 const WorkExperience = dynamic(() => import("../components/WorkExperience"), { loading: () => <Loader /> });
-const ContactMe = dynamic(() => import("../components/ContactMe"), { loading: () => <Loader /> });
 const Projects = dynamic(() => import("../components/Projects"), { loading: () => <Loader /> });
 const Skills = dynamic(() => import("../components/Skills"), { loading: () => <Loader /> });
 const Header = dynamic(() => import("../components/Header"), { loading: () => <Loader /> });
@@ -96,10 +95,6 @@ export default function Home({
       <section id="projects">
         <Projects projectData={projects} />
       </section>
-
-      <section id="contact">
-        <ContactMe pageInfo={pageInfo} />
-      </section>
     </div>
   );
 }
@@ -117,8 +112,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       experiences,
       projects,
       skills,
-      socials,
-    },
+      socials
+    }
 
     // -next js will regenerate the page every 10 seconds
     // -when a request comes in

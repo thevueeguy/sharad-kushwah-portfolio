@@ -1,6 +1,12 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import {
+  Loader,
+  Html,
+  OrbitControls,
+  Preload,
+  useGLTF,
+} from "@react-three/drei";
 
 const Earth = () => {
   const earth = useGLTF("./earth/scene.gltf");
@@ -23,17 +29,22 @@ const EarthCanvas = () => {
         position: [-4, 3, 6],
       }}
     >
-      <Suspense fallback={<></>}>
+      <Suspense
+        fallback={
+          <Html>
+            <Loader></Loader>
+          </Html>
+        }
+      >
         <OrbitControls
           autoRotate
-          enableZoom={false}
+          enableZoom={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
         <Earth />
-
-        <Preload all />
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };

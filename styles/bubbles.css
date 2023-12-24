@@ -3,7 +3,7 @@
   height: 100px;
   background: radial-gradient(#ecc490, #ff7300);
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   animation: move-up6 2s ease-in infinite alternate-reverse;
 }
 
