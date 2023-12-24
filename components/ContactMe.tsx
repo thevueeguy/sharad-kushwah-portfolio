@@ -1,8 +1,3 @@
-import {
-  BuildingLibraryIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-} from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-simple-toasts";
@@ -54,19 +49,6 @@ export default function ContactMe({ pageInfo }: Props) {
               Lets talk
             </span>
           </h4>
-
-          <div className="space-y-2 sm:space-y-4 md:space-y-5 lg:space-x-6">
-            <div className="flex items-center space-x-5 justify-center">
-              <MapPinIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-              <p className="text-sm sm:text-lg md:text-xl">
-                {pageInfo?.address}
-              </p>
-            </div>
-            <div className="flex items-center space-x-5 justify-center">
-              <EnvelopeIcon className="text-red-800 h-5 w-5 sm:h-7 sm:w-7 animate-pulse" />
-              <p className="text-sm sm:text-lg md:text-xl">{pageInfo?.email}</p>
-            </div>
-          </div>
 
           <form
             onSubmit={handleSubmit(onSubmit)}
