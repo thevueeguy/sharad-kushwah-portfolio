@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { urlFor } from "../sanity";
 import { Experience } from "../typings";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import NoSSRComponent from "./NoSSR";
+import { useState } from "react";
 
 type Props = {
   experience: Experience;
@@ -12,11 +14,13 @@ type Props = {
 export default function ExperienceCard({ experience }: Props) {
   const startDate = new Date(experience?.dateStarted);
   const endDate = new Date(experience?.dateEnded);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
 
   return (
     <VerticalTimelineElement
       contentStyle={{
         background: "black",
+        maxWidth: "500px"
       }}
       contentArrowStyle={{ borderRight: "10px solid  white" }}
       iconStyle={{ background: "white" }}
@@ -61,15 +65,48 @@ export default function ExperienceCard({ experience }: Props) {
                   })} ${endDate.getFullYear()}`}
             </div>
           </NoSSRComponent>
-
-          <ul className="scrollbar-thin scrollbar-track-black scrollbar-thumb-red-800 list-inside list-disc">
-            {experience?.points.map((point, index) => (
-              <li key={index} className="mb-2 text-xs md:text-base text-left leading-tight">
-                {point}
-              </li>
-            ))}
-          </ul>
+              
+          <motion.ul className="overflow-hidden list-inside list-disc">
+            <li
+              key={0}
+              className="mb-2 text-xs md:text-base text-left leading-tight"
+            >
+              {experience.points[0]}
+            </li>
+            <AnimatePresence initial={false}>
+              {isOpened && (
+                <motion.section
+                  key="content"
+                  initial="collapsed"
+                  animate="open"
+                  exit="collapsed"
+                  variants={{
+                    open: { opacity: 1, height: "auto" },
+                    collapsed: { opacity: 0, height: 0 },
+                  }}
+                  transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+                >
+                  {experience?.points.slice(1).map((point, index) => (
+                    <li key={index + 1} className="mb-2 text-xs md:text-base text-left leading-tight">
+                      {point}
+                    </li>
+                  ))}
+                </motion.section>
+              )}
+            </AnimatePresence>
+          </motion.ul>
         </div>
+        <motion.div
+            className="flex flex-row gap-3 justify-center items-center align-middle w-full h-full mt-3"
+            onClick={() => setIsOpened(!isOpened)}
+          >
+            <span>Read {isOpened ? "Less" : "More"}</span>
+            {isOpened ? (
+              <ChevronUpIcon className="text-red-800 h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 animate-bounce" />
+            ) : (
+              <ChevronDownIcon className="text-red-800 h-5 w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 animate-bounce" />
+            )}
+          </motion.div>
       </article>
     </VerticalTimelineElement>
   );

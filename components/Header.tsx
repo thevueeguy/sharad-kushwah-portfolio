@@ -70,7 +70,7 @@ export default function Header({ socials }: Props) {
           network="email"
           fgColor="white"
           bgColor="transparent"
-          url="#contact"
+          url="/contact"
         />
         <Link href="/contact">
           <p className="uppercase hidden md:inline-flex text-white-400 transition-all duration-200">
