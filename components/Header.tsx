@@ -9,7 +9,7 @@ type Props = {
 
 export default function Header({ socials }: Props) {
   return (
-    <header className="sticky h-16 md:h-20 xl:h-28 top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
+    <header className="sticky h-16 md:h-20 xl:h-28 top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-20 xl:items-center bg-transparent">
       <motion.div
         initial={{
           x: -500,
@@ -20,11 +20,12 @@ export default function Header({ socials }: Props) {
           x: 0,
           opacity: 1,
           scale: 1,
+          background: "transparent"
         }}
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center"
+        className="flex flex-row items-center bg-transparent"
       >
         {socials?.map((social, index) => (
           <div
