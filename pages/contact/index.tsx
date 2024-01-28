@@ -51,7 +51,7 @@ type Props = {
   socials: Social[];
 };
 
-export default function Home({ pageInfo, socials }: Props) {
+export default function Contact({ pageInfo, socials }: Props) {
   return (
     <div className="bg-black w-full relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <motion.div

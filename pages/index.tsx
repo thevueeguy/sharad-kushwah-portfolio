@@ -95,10 +95,6 @@ export default function Home({
         <Skills skills={skills} />
       </section>
 
-      {/* <section id="projects">
-        <Projects projectData={projects} />
-      </section> */}
-
       <section id="testimonials">
         <Testimonials testimonials={testimonials}  />
       </section>
