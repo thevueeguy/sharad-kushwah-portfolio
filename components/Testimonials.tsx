@@ -60,10 +60,10 @@ export default function Testimonials({ testimonials }: Props) {
                       {testimonial?.name}
                     </h4>
 
-                    <h4 className="text-xs mb-5 sm:text-sm md:text-md font-semibold text-center flex items-center">
+                    <h4 className="text-xs mb-5 mt-2 sm:text-sm md:text-md font-semibold text-center flex flex-col items-center">
                       {testimonial?.position}
                       <SocialIcon
-                        className="py-2 cursor-pointer transition-all duration-200"
+                        className="cursor-pointer transition-all duration-200"
                         network="linkedin"
                         fgColor="white"
                         bgColor="transparent"
