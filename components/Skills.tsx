@@ -15,6 +15,14 @@ export default function Skills({ skills }: Props) {
       viewport={{ once: true }}
       className="flex relative overflow-hidden flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
+      <video
+        className="absolute opacity-30 md:opacity-[15%] -z-10"
+        autoPlay
+        loop
+        muted
+      >
+        <source src="bg.mp4" type="video/mp4" />
+      </video>
       <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">
         &nbsp;Skills
       </h3>

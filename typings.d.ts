@@ -73,3 +73,11 @@ export interface Testimonial extends SanityBody {
   position: string;
   linkedin: string;
 }
+
+export interface Certificate extends SanityBody {
+  _type: "certificate";
+  title: string;
+  certificate: Image;
+  summary: string;
+  category: string;
+}

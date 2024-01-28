@@ -76,16 +76,16 @@ export default function About({ pageInfo }: Props) {
             as problem-solving, flexibility, teamwork, and time management. I
             have completed relevant coursework in Data Structures, Algorithms
             Analysis, Cyber Security, Version Control, Frontend Development, and
-            Backend Development.
+            Backend Development. I am always looking for opportunities to enhance my skills
+          and work on challenging projects. Please feel free to connect with me
+          on LinkedIn or drop me an email.
           </p>
         </div>
         <hr />
         <p className="text-[#e9e5e5] text-xs sm:text-base">
-          During my leisure time, I enjoy watching technology-related videos and
+          During my leisure time, I enjoy watching Anime or
           relaxing with Netflix. Additionally, I have a keen interest in reading
-          philosophy. I am always looking for opportunities to enhance my skills
-          and work on challenging projects. Please feel free to connect with me
-          on LinkedIn or drop me an email.
+          philosophy and playing video games. <a className="underline decoration-red-800 underline-offset-4 hover:underline-offset-8 transition-all ease-in-out" target="_blank" href="https://steamcommunity.com/id/thevueeguy">Click here</a> to add me on Steam.
         </p>
       </motion.div>
     </div>
