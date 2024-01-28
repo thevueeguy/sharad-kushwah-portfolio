@@ -103,7 +103,7 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const testimonials: Testimonial[] = await getTestimonials();
+  const testimonials: Testimonial[] = [];
   const experiences: Experience[] = await getExperiences();
   const projects: Project[] = await getProjects();
   const pageInfo: PageInfo = await getPageInfo();
