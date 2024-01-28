@@ -42,7 +42,7 @@ export default function ExperienceCard({ experience }: Props) {
           <div className="text-base sm:text-lg md:text-xl font-bold py-1">
             {experience?.company}
           </div>
-          <div className="w-1/3 flex py-2 justify-center gap-2 flex-wrap">
+          <div className="w-1/2 flex py-2 justify-center gap-2 flex-wrap">
             {experience?.technologies.map((technology) => (
               <motion.img
                 key={technology._id}

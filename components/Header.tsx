@@ -11,7 +11,7 @@ type Props = {
 export default function Header({ socials }: Props) {
   const [hover, setHover] = useState(false);
   return (
-    <header className="sticky h-16 md:h-20 xl:h-28 top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-20 xl:items-center bg-transparent">
+    <header className="sticky z-0 h-16 md:h-20 xl:h-28 top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-20 xl:items-center bg-transparent">
       <motion.div
         initial={{
           x: -500,

@@ -48,7 +48,7 @@ export default function Testimonials({ testimonials }: Props) {
                   className="snap-center flex flex-col space-y-5 justify-center items-center px-16 md:p-44 h-screen"
                 >
                   <motion.img
-                    initial={{ y: -200, opacity: 0 }}
+                    initial={{ y: -50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                     className="relative rounded-full h-24 w-24 sm:h-32 sm:w-32 xl:h-36 xl:w-36 mx-auto object-cover pt-0"
@@ -72,7 +72,7 @@ export default function Testimonials({ testimonials }: Props) {
                       />
                     </h4>
 
-                    <div className="overflow-y-auto md:w-3/4 text-ellipsis pb-5 text-left pl-3 pr-2">
+                    <div className="overflow-y-auto md:w-3/4 text-xs sm:text-base text-ellipsis pb-5 text-center pl-3 pr-2">
                       {testimonial?.review}
                     </div>
                   </div>
