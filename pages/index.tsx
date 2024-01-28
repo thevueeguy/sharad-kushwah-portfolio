@@ -24,6 +24,7 @@ const Loader = () => {
 
 // Components
 const WorkExperience = dynamic(() => import("../components/WorkExperience"), { loading: () => <Loader /> });
+const Testimonials = dynamic(() => import("../components/Testimonials"), { loading: () => <Loader /> });
 const Projects = dynamic(() => import("../components/Projects"), { loading: () => <Loader /> });
 const Skills = dynamic(() => import("../components/Skills"), { loading: () => <Loader /> });
 const Header = dynamic(() => import("../components/Header"), { loading: () => <Loader /> });
@@ -95,6 +96,10 @@ export default function Home({
       <section id="projects">
         <Projects projectData={projects} />
       </section>
+
+      {/* <section id="testimonials">
+        <Testimonials />
+      </section> */}
     </div>
   );
 }

@@ -42,7 +42,7 @@ export default function Hero({ pageInfo }: Props) {
           <Cursor cursorColor="#f1b05a" />
         </h1>
 
-        <div className="pt-8">
+        <div className="pt-8 z-1000">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
@@ -52,8 +52,8 @@ export default function Hero({ pageInfo }: Props) {
           <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
+          <Link href="#testimonials">
+            <button className="heroButton">Testimonials</button>
           </Link>
         </div>
       </motion.div>

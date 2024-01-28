@@ -17,7 +17,7 @@ export default function WorkExperience({ experiences }: Props) {
       <VerticalTimeline>
         {experiences
           ?.sort(
-            (a, b) => Date.parse(a.dateStarted) - Date.parse(b.dateStarted)
+            (a, b) => Date.parse(b.dateStarted) - Date.parse(a.dateStarted)
           )
           .map((experience) => {
             return (

@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { Social } from "../typings";
+import { useState } from "react";
 
 type Props = {
   socials: Social[];
 };
 
 export default function Header({ socials }: Props) {
+  const [hover, setHover] = useState(false);
   return (
     <header className="sticky h-16 md:h-20 xl:h-28 top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-20 xl:items-center bg-transparent">
       <motion.div
@@ -20,7 +22,7 @@ export default function Header({ socials }: Props) {
           x: 0,
           opacity: 1,
           scale: 1,
-          background: "transparent"
+          background: "transparent",
         }}
         transition={{
           duration: 1.5,
@@ -64,17 +66,19 @@ export default function Header({ socials }: Props) {
         transition={{
           duration: 1,
         }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
         className="flex flex-row items-center text-white-300 cursor-pointer hover:text-[#f1b05a]"
       >
         <SocialIcon
-          className="cursor-pointer transition-all duration-200"
+          className={"cursor-pointer transition-all duration-200 " + (hover ? "mr-1" : "mr-0")}
           network="email"
-          fgColor="white"
+          fgColor={hover ? "orange" : "white"}
           bgColor="transparent"
           url="/contact"
         />
         <Link href="/contact">
-          <p className="uppercase hidden md:inline-flex text-white-400 transition-all duration-200">
+          <p className={"uppercase hidden md:inline-flex text-white-400 transition-all duration-200 " + (hover ? 'transform translate-x-1' : 'transform translate-x-0')}>
             get in touch
           </p>
         </Link>
