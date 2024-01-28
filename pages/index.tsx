@@ -25,14 +25,14 @@ const Loader = () => {
 // Components
 const WorkExperience = dynamic(() => import("../components/WorkExperience"), { loading: () => <Loader /> });
 const Testimonials = dynamic(() => import("../components/Testimonials"), { loading: () => <Loader /> });
-const Projects = dynamic(() => import("../components/Projects"), { loading: () => <Loader /> });
+// const Projects = dynamic(() => import("../components/Projects"), { loading: () => <Loader /> });
 const Skills = dynamic(() => import("../components/Skills"), { loading: () => <Loader /> });
 const Header = dynamic(() => import("../components/Header"), { loading: () => <Loader /> });
 const About = dynamic(() => import("../components/About"), { loading: () => <Loader /> });
 const Hero = dynamic(() => import("../components/Hero"), { loading: () => <Loader /> });
 
 // Type definition
-import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+import { Experience, PageInfo, Project, Skill, Social, Testimonial } from "../typings";
 
 // Static props
 import { getExperiences } from "../utils/getExperiences";
@@ -40,6 +40,7 @@ import { getPageInfo } from "../utils/getPageInfo";
 import { getProjects } from "../utils/getProjects";
 import { getSkills } from "../utils/getSkills";
 import { getSocials } from "../utils/getSocials";
+import { getTestimonials } from "../utils/getTestimonials";
 
 type Props = {
   pageInfo: PageInfo;
@@ -47,12 +48,13 @@ type Props = {
   skills: Skill[];
   projects: Project[];
   socials: Social[];
+  testimonials: Testimonial[];
 };
 
 export default function Home({
   pageInfo,
   experiences,
-  projects,
+  testimonials,
   skills,
   socials,
 }: Props) {
@@ -93,31 +95,33 @@ export default function Home({
         <Skills skills={skills} />
       </section>
 
-      <section id="projects">
+      {/* <section id="projects">
         <Projects projectData={projects} />
-      </section>
-
-      {/* <section id="testimonials">
-        <Testimonials />
       </section> */}
+
+      <section id="testimonials">
+        <Testimonials testimonials={testimonials}  />
+      </section>
     </div>
   );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await getPageInfo();
+  const testimonials: Testimonial[] = await getTestimonials();
   const experiences: Experience[] = await getExperiences();
   const projects: Project[] = await getProjects();
-  const skills: Skill[] = await getSkills();
+  const pageInfo: PageInfo = await getPageInfo();
   const socials: Social[] = await getSocials();
+  const skills: Skill[] = await getSkills();
 
   return {
     props: {
-      pageInfo,
+      testimonials,
       experiences,
       projects,
-      skills,
+      pageInfo,
       socials,
+      skills
     },
 
     // -next js will regenerate the page every 10 seconds

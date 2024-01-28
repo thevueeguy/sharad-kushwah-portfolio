@@ -10,8 +10,8 @@ export default {
         type: "string",
       },
       {
-        name: "image",
-        title: "Image",
+        name: "certificate",
+        title: "Certificate",
         type: "image",
         options: {
           hotspot: true,
@@ -20,13 +20,12 @@ export default {
       {
         name: "summary",
         title: "Summary",
-        type: "text",
+        type: "string",
       },
       {
-        name:"technologies",
-        title:"Technologies",
-        type:"array",
-        of: [{ type: "reference", to: { type: "skill" } }],
+        name: "category",
+        title: "Category",
+        type: "string",
       }
     ],
   };

@@ -64,3 +64,12 @@ export interface Social extends SanityBody {
   title: string;
   url: string;
 }
+
+export interface Testimonial extends SanityBody {
+  _type: "testimonial";
+  name: string;
+  image: Image;
+  review: string;
+  position: string;
+  linkedin: string;
+}

@@ -20,7 +20,7 @@
   }
 
   .hexagon {
-    @apply before:absolute before:top-0 before:left-0 before:w-full before:h-full before:border-2 before:rotate-[60deg] before:border-[#696868] before:opacity-70 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:border-2 after:-rotate-[60deg] after:border-[#696868] after:opacity-70;
+    @apply before:absolute before:top-0 before:left-0 before:w-full before:h-full before:border-2 before:rotate-[60deg] before:border-[#696868] before:opacity-75 after:absolute after:top-0 after:left-0 after:w-full after:h-full after:border-2 after:-rotate-[60deg] after:border-[#696868] after:opacity-75;
   }
 }
 

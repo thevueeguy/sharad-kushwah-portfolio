@@ -6,7 +6,7 @@ export default {
       {
         name: "name",
         title: "name",
-        description:"Name",
+        description:"Name of the person",
         type: "string",
       },
       {
