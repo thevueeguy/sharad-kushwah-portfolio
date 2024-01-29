@@ -38,16 +38,8 @@ export default function Header({ socials }: Props) {
               window.open(social.url, "_blank");
             }}
           >
-            <SocialIcon
-              key={social._id}
-              url={social.url}
-              target="_blank"
-              fgColor="white"
-              bgColor="transparent"
-            />
-            <p className="transition-all duration-500 cursor-pointer ease-out opacity-50 w-0 overflow-hidden origin-top-left -rotate-12 group-hover:opacity-100 group-hover:w-fit group-hover:rotate-0">
-              {social.title}
-            </p>
+            <SocialIcon key={social._id} url={social.url} target="_blank" fgColor="white" bgColor="transparent" />
+            <p className="transition-all duration-500 cursor-pointer ease-out opacity-50 w-0 overflow-hidden origin-top-left -rotate-12 group-hover:opacity-100 group-hover:w-fit group-hover:rotate-0">{social.title}</p>
           </div>
         ))}
       </motion.div>
@@ -70,17 +62,9 @@ export default function Header({ socials }: Props) {
         onMouseLeave={() => setHover(false)}
         className="flex flex-row items-center text-white-300 cursor-pointer hover:text-[#f1b05a]"
       >
-        <SocialIcon
-          className={"cursor-pointer transition-all duration-200 " + (hover ? "mr-1" : "mr-0")}
-          network="email"
-          fgColor={hover ? "orange" : "white"}
-          bgColor="transparent"
-          url="/contact"
-        />
+        <SocialIcon className={"cursor-pointer transition-all duration-200 " + (hover ? "mr-1" : "mr-0")} network="email" fgColor={hover ? "orange" : "white"} bgColor="transparent" url="/contact" />
         <Link href="/contact">
-          <p className={"uppercase hidden md:inline-flex text-white-400 transition-all duration-200 " + (hover ? 'transform translate-x-1' : 'transform translate-x-0')}>
-            get in touch
-          </p>
+          <p className={"uppercase hidden md:inline-flex text-white-400 transition-all duration-200 " + (hover ? "transform translate-x-1" : "transform translate-x-0")}>get in touch</p>
         </Link>
       </motion.div>
     </header>

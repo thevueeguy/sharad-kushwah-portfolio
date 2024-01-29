@@ -23,8 +23,7 @@ export default function ContactMe({ pageInfo }: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    if (formData.email && formData.message && formData.name && formData.subject)
-      location.href = `mailto:sharadrkushwah@gmail.com?subject=${formData.subject}&body=Hello, my name is ${formData.name}, ${formData.message} (${formData.email})`;
+    if (formData.email && formData.message && formData.name && formData.subject) location.href = `mailto:sharadrkushwah@gmail.com?subject=${formData.subject}&body=Hello, my name is ${formData.name}, ${formData.message} (${formData.email})`;
     else toast("Can not submit with empty values.", 1000);
   };
 
@@ -37,48 +36,25 @@ export default function ContactMe({ pageInfo }: Props) {
           </NoSSRComponent>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="flex flex-col space-y-6 w-full xl:w-1/2"
-        >
+        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="flex flex-col space-y-6 w-full xl:w-1/2">
           <h4 className="text-sm sm:text-lg md:text-xl font-semibold text-center">
             I&#39;ve got what you need.&nbsp;&nbsp;
-            <span className="decoration-red-800 underline text-sm sm:text-lg md:text-xl">
-              Lets talk
-            </span>
+            <span className="decoration-red-800 underline text-sm sm:text-lg md:text-xl">Lets talk</span>
           </h4>
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-3 mx-auto w-[70%] h-auto"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-3 mx-auto w-[70%] h-auto">
             {["name", "email", "subject", "message"].map((item: any, index) => (
               <div key={index}>
-                <input
-                  {...register(item)}
-                  placeholder={item[0].toUpperCase() + item.slice(1)}
-                  className="contactInput w-full placeholder:text-sm placeholder:sm:text-lg placeholder:md:text-xl"
-                  type={item === "email" ? item : "text"}
-                />
+                <input {...register(item)} placeholder={item[0].toUpperCase() + item.slice(1)} className="contactInput w-full placeholder:text-sm placeholder:sm:text-lg placeholder:md:text-xl" type={item === "email" ? item : "text"} />
               </div>
             ))}
 
             <button className="contactButton">
               <div className="svg-wrapper-1 pr-3">
                 <div className="svg-wrapper">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      fill="currentColor"
-                      d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                    ></path>
+                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
                   </svg>
                 </div>
               </div>
