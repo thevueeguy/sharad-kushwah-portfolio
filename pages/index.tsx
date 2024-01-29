@@ -66,12 +66,6 @@ export default function Home({
         transition={{ duration: 2 }}
         className="circle"
       ></motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.6 }}
-        transition={{ duration: 2 }}
-        className="circle"
-      ></motion.div>
 
       <Head>
         <title>Sharad Kushwah</title>

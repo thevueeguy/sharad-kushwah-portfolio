@@ -16,7 +16,7 @@ export default function Skills({ skills }: Props) {
       className="flex relative overflow-hidden flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
       <video
-        className="absolute opacity-30 md:opacity-[15%] -z-10"
+        className="opacity-30 md:opacity-[15%] -z-10 flex justify-center pointer-events-none h-screen absolute object-cover right-0 bottom-0"
         autoPlay
         loop
         muted

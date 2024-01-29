@@ -44,3 +44,7 @@
 .swiper-button-prev:after {
   font-weight: bold !important;
 }
+
+video::-webkit-media-controls {
+  display: none;
+}

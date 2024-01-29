@@ -72,7 +72,7 @@ export default function Testimonials({ testimonials }: Props) {
                       />
                     </h4>
 
-                    <div className="overflow-y-auto md:w-3/4 text-xs sm:text-base text-ellipsis pb-5 text-center pl-3 pr-2">
+                    <div className="overflow-y-auto w-full lg:w-3/4 text-xs sm:text-base text-ellipsis pb-5 text-left sm:text-center pl-3 pr-2">
                       {testimonial?.review}
                     </div>
                   </div>
