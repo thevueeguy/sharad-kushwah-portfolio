@@ -4,10 +4,16 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
 import BackgroundCircles from "./BackgroundCircles";
+import { Tooltip } from "react-tooltip";
+import { memo } from "react";
 
 type Props = {
   pageInfo: PageInfo;
 };
+
+const WinkEmoji = memo(function WinkEmoji() {
+  return <span role="img">{String.fromCodePoint(0x1f609)}</span>;
+});
 
 export default function Hero({ pageInfo }: Props) {
   const [text] = useTypewriter({
@@ -16,9 +22,12 @@ export default function Hero({ pageInfo }: Props) {
     delaySpeed: 2000,
   });
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden z-2000">
       <BackgroundCircles />
-      <div className="relative rounded-full h-32 w-32 mx-auto group">
+      <div className="relative rounded-full h-32 w-32 mx-auto group" data-tooltip-id="tooltip">
+        <Tooltip id="tooltip">
+          <WinkEmoji />
+        </Tooltip>
         <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="absolute rounded-full h-32 w-32 mx-auto mt-2 object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="profile-photo" />
       </div>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="z-20">
@@ -28,7 +37,7 @@ export default function Hero({ pageInfo }: Props) {
           <Cursor cursorColor="#f1b05a" />
         </h1>
 
-        <div className="pt-8 z-1000">
+        <div className="pt-8">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

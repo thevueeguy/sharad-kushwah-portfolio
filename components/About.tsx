@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { urlFor } from "../sanity";
 import { PageInfo } from "../typings";
 
 type Props = {
