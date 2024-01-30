@@ -28,6 +28,7 @@ export default function Testimonials({ testimonials }: Props) {
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          speed={1800}
           autoplay={{
             delay: 4000,
             disableOnInteraction: true,
