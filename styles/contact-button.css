@@ -25,7 +25,7 @@
   }
   
   .contactButton:hover span {
-    transform: translateX(4em);
+    transform: translateX(2em);
   }
   
   .contactButton:active {

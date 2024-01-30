@@ -24,8 +24,8 @@ export default function Hero({ pageInfo }: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden z-2000">
       <BackgroundCircles />
-      <div className="relative rounded-full h-32 w-32 mx-auto group" data-tooltip-id="tooltip">
-        <Tooltip id="tooltip">
+      <div className="relative rounded-full h-32 w-32 mx-auto group" data-tooltip-id="tooltip-wink">
+        <Tooltip id="tooltip-wink">
           <WinkEmoji />
         </Tooltip>
         <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="absolute rounded-full h-32 w-32 mx-auto mt-2 object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="profile-photo" />

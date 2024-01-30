@@ -19,7 +19,7 @@ export default function ActionButton() {
         <PlusIcon className="h-4 w-4 md:h-6 md:w-6 font-bold" />
       </div>
       <div data-tooltip-id="tooltip" data-tooltip-content="Download Resume" data-tooltip-place="left" className={`absolute z-20000 rounded-full transition-all duration-100 ease-out scale-y-0 flex  p-2 hover:p-3 bg-green-300 scale-100 hover:bg-slate-600 hover:text-white text-black ${click ? "scale-y-100 -translate-x-16" : ""}`}>
-        <a href="resume.pdf" download>
+        <a href="Sharad_Resume.pdf" download>
           <ArrowDownTrayIcon className="h-3 w-3 md:h-5 md:w-5 m-1" />
         </a>
       </div>

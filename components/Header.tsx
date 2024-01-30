@@ -13,7 +13,6 @@ export default function Header({ socials }: Props) {
   const [hover, setHover] = useState(false);
   return (
     <header className="sticky h-16 md:h-20 xl:h-28 top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-20 xl:items-center bg-transparent">
-      <Tooltip id="tooltip" />
       <motion.div
         initial={{
           x: -500,
@@ -64,6 +63,7 @@ export default function Header({ socials }: Props) {
         className="flex flex-row items-center text-white-300 cursor-pointer hover:text-[#f1b05a]"
         data-tooltip-id="tooltip" 
         data-tooltip-content="Connect with me!"
+        data-tooltip-place="bottom-start"
       >
         <SocialIcon className={"cursor-pointer transition-all duration-200 " + (hover ? "mr-1" : "mr-0")} network="email" fgColor={hover ? "orange" : "white"} bgColor="transparent" url="/contact" />
         <Link href="/contact">
