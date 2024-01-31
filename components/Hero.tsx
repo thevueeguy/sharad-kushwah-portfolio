@@ -28,7 +28,7 @@ export default function Hero({ pageInfo }: Props) {
         <Tooltip id="tooltip-wink">
           <WinkEmoji />
         </Tooltip>
-        <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="absolute rounded-full h-32 w-32 mx-auto mt-2 object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="profile-photo" />
+        <motion.img initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className="absolute border-2 border-white rounded-full h-32 w-32 mx-auto mt-2 object-cover" src={urlFor(pageInfo?.heroImage).url()} alt="profile-photo" />
       </div>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="z-20">
         <h2 className="text-xs sm:text-base md:text-xl mx-auto uppercase text-gray-400 px-4 tracking-[7px] md:tracking-[12px]">{pageInfo?.role}</h2>
