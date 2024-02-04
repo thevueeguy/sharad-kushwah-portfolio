@@ -8,7 +8,7 @@ export default function ActionButton() {
 
   return (
     <div className="fixed bottom-0 right-0 p-5 flex items-end justify-end w-18 h-18 md:w-24 md:h-24 z-20000">
-      <Tooltip id="tooltip" />
+      <Tooltip id="tooltip" className="max-w-sm text-center" />
       <div
         className={`text-white cursor-pointer active:scale-110 shadow-xl z-20000 ease-in-out duration-100 flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-red-400 to-red-700 z-50 absolute ${click ? "rotate-45" : ""}`}
         onClick={(e) => {

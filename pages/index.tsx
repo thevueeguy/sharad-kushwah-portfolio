@@ -11,7 +11,7 @@ const About = dynamic(() => import("../components/About"), { loading: () => <Loa
 const Hero = dynamic(() => import("../components/Hero"), { loading: () => <Loader /> });
 
 // Type definition
-import { Experience, PageInfo, Project, Skill, Social, Testimonial } from "../typings";
+import { Certificate, Experience, PageInfo, Project, Skill, Social, Testimonial } from "../typings";
 
 // Static props
 import { getExperiences } from "../utils/getExperiences";
@@ -20,7 +20,9 @@ import { getProjects } from "../utils/getProjects";
 import { getSkills } from "../utils/getSkills";
 import { getSocials } from "../utils/getSocials";
 import { getTestimonials } from "../utils/getTestimonials";
+import { getCertificates } from "../utils/getCertificates";
 import ActionButton from "../components/ActionButton";
+import Certificates from "../components/Certificates";
 
 type Props = {
   pageInfo: PageInfo;
@@ -29,6 +31,7 @@ type Props = {
   projects: Project[];
   socials: Social[];
   testimonials: Testimonial[];
+  certificates: Certificate[];
 };
 
 // custom loader
@@ -44,7 +47,7 @@ const Loader = () => {
   );
 };
 
-export default function Home({ pageInfo, experiences, testimonials, skills, socials }: Props) {
+export default function Home({ certificates, pageInfo, experiences, testimonials, skills, socials }: Props) {
   return (
     <div className="bg-black w-full relative text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scroll-smooth scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.6 }} transition={{ duration: 2 }} className="circle"></motion.div>
@@ -71,6 +74,10 @@ export default function Home({ pageInfo, experiences, testimonials, skills, soci
         <Skills skills={skills} />
       </section>
 
+      <section id="certificates">
+        <Certificates certificates={certificates} />
+      </section>
+
       <section id="testimonials">
         <Testimonials testimonials={testimonials} />
       </section>
@@ -82,6 +89,7 @@ export default function Home({ pageInfo, experiences, testimonials, skills, soci
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const testimonials: Testimonial[] = await getTestimonials();
+  const certificates: Certificate[] = await getCertificates();
   const experiences: Experience[] = await getExperiences();
   const projects: Project[] = await getProjects();
   const pageInfo: PageInfo = await getPageInfo();
@@ -90,6 +98,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
+      certificates,
       testimonials,
       experiences,
       projects,
