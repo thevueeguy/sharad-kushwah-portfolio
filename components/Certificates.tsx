@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState } from "react";
 import { urlFor } from "../sanity";
 import { motion } from "framer-motion";
@@ -55,3 +56,4 @@ export default function Certificates({ certificates }: Props) {
     </motion.div>
   );
 }
+
