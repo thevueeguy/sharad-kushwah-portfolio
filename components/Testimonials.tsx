@@ -34,7 +34,7 @@ export default function Testimonials({ testimonials }: Props) {
             disableOnInteraction: true,
           }}
         >
-          {testimonials?.map((testimonial, index) => (
+          {testimonials?.sort((first, second) => (first?.name > second?.name ? -1 : 1)).map((testimonial, index) => (
             <SwiperSlide key={testimonial._createdAt} virtualIndex={index}>
               <div className="flex justify-center items-center">
                 <div key={testimonial?._id} className="snap-center flex flex-col space-y-5 justify-center items-center px-16 md:p-44 h-screen">

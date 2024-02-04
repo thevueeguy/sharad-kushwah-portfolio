@@ -20,12 +20,12 @@ export default function ExperienceCard({ experience }: Props) {
     <VerticalTimelineElement
       contentStyle={{
         background: "transparent",
-        maxWidth: "500px",
+        maxWidth: "550px",
       }}
       contentArrowStyle={{ borderRight: "10px solid  white" }}
       iconStyle={{ background: "white" }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex justify-center items-center w-full h-full" data-tooltip-id="tooltip" data-tooltip-content={experience?.company} data-tooltip-place="bottom">
           <motion.img src={urlFor(experience?.companyImage).url()} alt={experience.company} className="w-[80%] h-[80%] object-contain" />
         </div>
       }
@@ -53,9 +53,9 @@ export default function ExperienceCard({ experience }: Props) {
             </div>
           </NoSSRComponent>
 
-          <motion.ul className="overflow-hidden list-inside list-disc">
+          <motion.ul className="overflow-hidden list-inside list-square text-red-800 font-bold">
             <li key={0} className="mb-2 text-xs md:text-base text-left leading-tight">
-              {experience.points[0]}
+              <span className="text-white font-normal -ml-1">{experience.points[0]}</span>
             </li>
             <AnimatePresence initial={false}>
               {isOpened && (
@@ -72,7 +72,7 @@ export default function ExperienceCard({ experience }: Props) {
                 >
                   {experience?.points.slice(1).map((point, index) => (
                     <li key={index + 1} className="mb-2 text-xs md:text-base text-left leading-tight">
-                      {point}
+                       <span className="text-white font-normal -ml-1">{point}</span>
                     </li>
                   ))}
                 </motion.section>

@@ -8,7 +8,7 @@ type Props = {
 
 export default function Skill({ skillSet }: Props) {
   return (
-    <div className="group relative flex justify-center cursor-pointer bg-white rounded-full border-white border-2 box-border">
+    <div className="group relative flex justify-center cursor-pointer bg-white rounded-full border-white border-2 box-border"  data-tooltip-id="tooltip" data-tooltip-content={skillSet?.title} data-tooltip-place="bottom">
       <motion.img
         initial={{
           opacity: 0,
