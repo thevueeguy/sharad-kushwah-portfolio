@@ -1,10 +1,11 @@
 .heroButton {
   cursor: pointer;
   transition: all .4s;
+  box-sizing: border-box;
  }
  
  .heroButton:hover {
-  transform: translateY(-10px);
+  transform: translateY(-2px);
   box-shadow: 0 7px 0 -2px #eb992e,
    0 15px 0 -4px #39a2db,
    0 16px 10px -3px #39a2db;

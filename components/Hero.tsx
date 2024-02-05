@@ -37,7 +37,7 @@ export default function Hero({ pageInfo }: Props) {
           <Cursor cursorColor="#f1b05a" />
         </h1>
 
-        <div className="pt-8">
+        <div className="pt-8 cursor-pointer">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
