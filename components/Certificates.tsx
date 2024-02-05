@@ -27,9 +27,9 @@ export default function Certificates({ certificates }: Props) {
       <motion.div className="relative w-full flex z-20 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80 h-4/5">
         <Swiper slidesPerView={3} grid={{ rows: 2 }} spaceBetween={30} centeredSlides={true} modules={[Navigation, A11y, Grid]} navigation>
           {certificates.map((certificate, index) => (
-            <SwiperSlide key={certificate._id} virtualIndex={index} className="!h-1/3 my-auto align-middle !flex !mx-auto" onClick={() => {setIsClicked(true); setUrl(urlFor(certificate?.certificate).url())}}>
-              <div className={"flex flex-col items-center hover:scale-110 transition-all duration-200 cursor-pointer group " + ((index&1 ? "justify-start" : "justify-end"))}>
-                <motion.img initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="relative w-24 sm:w-44 xl:w-72 mx-auto object-contain pt-0 group-hover:border-red-800 group-hover:border-2 border-spacing-1 hover:rounded-md" data-tooltip-id="tooltip" data-tooltip-content={certificate?.summary} data-tooltip-place="bottom" src={urlFor(certificate?.certificate).url()} alt="profile-photo" />
+            <SwiperSlide key={certificate._id} virtualIndex={index} className="!h-1/3 my-auto align-middle !flex !mx-auto">
+              <div className={"flex flex-col items-center hover:scale-110 transition-all duration-200 cursor-pointer group opacity-80 hover:opacity-100 " + ((index&1 ? "justify-start" : "justify-end"))}>
+                <motion.img onClick={() => {setIsClicked(true); setUrl(urlFor(certificate?.certificate).url())}} initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1 }} className="relative w-24 h-24 sm:w-44 sm:h-44 xl:w-60 xl:h-60 mx-auto object-contain pt-0" data-tooltip-id="tooltip" data-tooltip-content={certificate?.summary} data-tooltip-place="bottom" src={urlFor(certificate?.certificate).url()} alt="profile-photo" />
               </div>
             </SwiperSlide>
           ))}
