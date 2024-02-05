@@ -22,9 +22,9 @@ export default function Certificates({ certificates }: Props) {
   return (
     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center">
       <h3 className="absolute top-0 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">&nbsp;Certificates</h3>
-      <h3 className="absolute top-12 uppercase tracking-[3px] text-gray-500 text-xs sm:text-sm md:text-md">Click on a certificate to view in full size</h3>
+      <h3 className="absolute top-12 uppercase text-center tracking-[3px] text-gray-500 text-xs sm:text-sm md:text-md">Click on a certificate to view in full size</h3>
 
-      <motion.div className="relative w-full flex z-20 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80 h-4/5">
+      <motion.div className="relative w-full flex scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80 h-4/5">
         <Swiper slidesPerView={3} grid={{ rows: 2 }} spaceBetween={30} centeredSlides={true} modules={[Navigation, A11y, Grid]} navigation>
           {certificates.map((certificate, index) => (
             <SwiperSlide key={certificate._id} virtualIndex={index} className="!h-1/3 my-auto align-middle !flex !mx-auto">

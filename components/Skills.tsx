@@ -15,7 +15,7 @@ export default function Skills({ skills }: Props) {
 
   return (
     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }} viewport={{ once: true }} className="flex relative overflow-hidden flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 h-screen justify-center xl:space-y-0 mx-auto items-center">
-      <video className="opacity-30 md:opacity-[15%] -z-10 flex justify-center pointer-events-none absolute object-cover left-0 bottom-0" ref={video} onEnded={onEndedLoop} autoPlay muted playsInline>
+      <video className="opacity-30 md:opacity-[15%] flex justify-center pointer-events-none absolute object-cover left-0 bottom-0" ref={video} onEnded={onEndedLoop} autoPlay muted playsInline>
         <source src="bg.mp4" type="video/mp4" />
       </video>
       <h3 className="absolute top-10 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">&nbsp;Skills</h3>

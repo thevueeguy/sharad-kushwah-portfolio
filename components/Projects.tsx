@@ -16,10 +16,10 @@ type Props = {
 
 export default function Projects({ projectData }: Props) {
   return (
-    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center z-0">
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly items-center">
       <h3 className="absolute top-0 uppercase tracking-[10px] md:tracking-[20px] text-gray-500 text-base sm:text-xl md:text-2xl mx-auto font-medium">&nbsp;Projects</h3>
 
-      <motion.div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80 lg:px-16">
+      <motion.div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80 lg:px-16">
         <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} spaceBetween={20} slidesPerView={1} navigation pagination={{ clickable: true }} scrollbar={{ draggable: true }} onSwiper={(swiper) => {}} onSlideChange={() => {}}>
           {projectData?.map((project, index) => (
             <SwiperSlide key={project._createdAt} virtualIndex={index}>
