@@ -12,6 +12,7 @@ export default function ActionButton() {
       <div
         className={`text-white cursor-pointer active:scale-110 shadow-xl ease-in-out duration-100 flex items-center justify-center p-3 rounded-full bg-gradient-to-r from-red-400 to-red-700 absolute ${click ? "rotate-45" : ""}`}
         onClick={(e) => {
+          e.preventDefault();
           setClick(!click);
         }}
       >
