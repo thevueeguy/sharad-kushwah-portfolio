@@ -19,8 +19,8 @@ export default function Hero({ pageInfo }: Props) {
   const [text] = useTypewriter({
     words: [  
       "Namaskaram!", 
-      "I'm a Frontend Engineer, crafting seamless UI",
-      "Pixel perfectionist, refining websites with an eagle eye.", 
+      "I'm a Frontend Engineer, crafting seamless user interface",
+      "Pixel perfectionist, refining websites with an eagle eye", 
       "<Welcome />"
     ],
     loop: true,
