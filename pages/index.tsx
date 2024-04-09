@@ -6,7 +6,6 @@ import Head from "next/head";
 const WorkExperience = dynamic(() => import("../components/WorkExperience"), { loading: () => <Loader /> });
 const Testimonials = dynamic(() => import("../components/Testimonials"), { loading: () => <Loader /> });
 const Skills = dynamic(() => import("../components/Skills"), { loading: () => <Loader /> });
-const Header = dynamic(() => import("../components/Header"), { loading: () => <Loader /> });
 const About = dynamic(() => import("../components/About"), { loading: () => <Loader /> });
 const Hero = dynamic(() => import("../components/Hero"), { loading: () => <Loader /> });
 
@@ -35,7 +34,7 @@ type Props = {
 };
 
 // custom loader
-const Loader = () => {
+export const Loader = () => {
   return (
     <div role="status" className="h-screen w-full flex justify-center items-center">
       <svg aria-hidden="true" className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +55,8 @@ export default function Home({ certificates, pageInfo, experiences, testimonials
         <title>Sharad Kushwah</title>
       </Head>
 
-      <Header socials={socials} />
-
       <section id="hero">
-        <Hero pageInfo={pageInfo} />
+        <Hero pageInfo={pageInfo} socials={socials} />
       </section>
 
       <section id="about">
