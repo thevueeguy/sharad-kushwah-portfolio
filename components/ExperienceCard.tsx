@@ -54,9 +54,11 @@ export default function ExperienceCard({ experience }: Props) {
           </NoSSRComponent>
 
           <motion.ul className="overflow-hidden list-inside list-square text-red-800 font-bold">
-            <li key={0} className="mb-2 text-xs md:text-base text-left leading-tight">
-              <span className="text-white font-normal -ml-1">{experience.points[0]}</span>
-            </li>
+            {experience.points?.length && (
+              <li key={0} className="mb-2 text-xs md:text-base text-left leading-tight">
+                <span className="text-white font-normal -ml-1">{experience.points[0]}</span>
+              </li>
+            )}
             <AnimatePresence initial={false}>
               {isOpened && (
                 <motion.section
@@ -72,7 +74,7 @@ export default function ExperienceCard({ experience }: Props) {
                 >
                   {experience?.points.slice(1).map((point, index) => (
                     <li key={index + 1} className="mb-2 text-xs md:text-base text-left leading-tight">
-                       <span className="text-white font-normal -ml-1">{point}</span>
+                      <span className="text-white font-normal -ml-1">{point}</span>
                     </li>
                   ))}
                 </motion.section>

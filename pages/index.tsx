@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
+import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
@@ -48,39 +49,41 @@ export const Loader = () => {
 
 export default function Home({ certificates, pageInfo, experiences, testimonials, skills, socials }: Props) {
   return (
-    <div className="bg-black w-full relative text-white h-screen overflow-y-scroll overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.6 }} transition={{ duration: 2 }} className="circle"></motion.div>
+    <Suspense fallback={<Loader />}>
+      <div className="bg-black w-full relative text-white h-screen overflow-y-scroll overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-red-900/20 scrollbar-thumb-red-900/80">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.6 }} transition={{ duration: 2 }} className="circle"></motion.div>
 
-      <Head>
-        <title>Sharad Kushwah</title>
-      </Head>
+        <Head>
+          <title>Sharad Kushwah</title>
+        </Head>
 
-      <section id="hero">
-        <Hero pageInfo={pageInfo} socials={socials} />
-      </section>
+        <section id="hero">
+          <Hero pageInfo={pageInfo} socials={socials} />
+        </section>
 
-      <section id="about">
-        <About pageInfo={pageInfo} />
-      </section>
+        <section id="about">
+          <About pageInfo={pageInfo} />
+        </section>
 
-      <section id="experience">
-        <WorkExperience experiences={experiences} />
-      </section>
+        <section id="experience">
+          <WorkExperience experiences={experiences} />
+        </section>
 
-      <section id="skills">
-        <Skills skills={skills} />
-      </section>
+        <section id="skills">
+          <Skills skills={skills} />
+        </section>
 
-      <section id="certificates">
-        <Certificates certificates={certificates} />
-      </section>
+        <section id="certificates">
+          <Certificates certificates={certificates} />
+        </section>
 
-      <section id="testimonials">
-        <Testimonials testimonials={testimonials} />
-      </section>
+        <section id="testimonials">
+          <Testimonials testimonials={testimonials} />
+        </section>
 
-      <ActionButton />
-    </div>
+        <ActionButton />
+      </div>
+    </Suspense>
   );
 }
 

@@ -4,7 +4,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-3 md:px-6 py-2 rounded-full uppercase text-sm mx-1 my-2 opacity-80 hover:opacity-100 hover:rounded-full;
+    @apply py-2 rounded-full uppercase text-sm mx-2 md:mx-5 my-2 opacity-80 hover:px-3 hover:md:px-6 hover:opacity-100 hover:rounded-full bg-black;
   }
 
   .list-item-about {
