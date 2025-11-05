@@ -60,7 +60,7 @@ export default function About({ pageInfo }: Props) {
         <hr />
         <p className="text-[#e9e5e5] text-xs sm:text-base">
           During my leisure time, I enjoy watching Anime or relaxing with Netflix. Additionally, I have a keen interest in reading philosophy and playing video games.{" "}
-          <a className="underline decoration-red-800 underline-offset-4 hover:underline-offset-8 transition-all ease-in-out" target="_blank" href="https://steamcommunity.com/id/thevueeguy">
+          <a className="underline decoration-red-800 underline-offset-4 hover:underline-offset-8 transition-all ease-in-out" target="_blank" href="https://steamcommunity.com/id/parker_flare">
             Click here
           </a>{" "}
           to add me on Steam.
