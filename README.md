@@ -16,4 +16,4 @@ Libraries Used :
 9)  NextJs API                   --> For retrieving data from sanity (check folder ./pages/api/)
 10) Swiper                       --> For implementation of Slides
 
-Hosted URL -> https://sharad.tech
+Hosted URL -> https://sharad.pro
